@@ -24,9 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
+      {/* Whem we click on any link now the scrolling is smooth */}
       <body
-        className={`${outfit.className} ${ovo.className} antialiased`}
+        className={`${outfit.className} ${ovo.className} antialiased leading-8
+        overflow-x-hidden`}// overflow-x-hidden:so that it would not scroll
+        // webpage on smaller screen when we move the sidebar out
+        // of the viewport width
       >
         {children}
       </body>
