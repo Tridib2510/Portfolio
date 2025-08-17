@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 *{
   /* We select all the html elements and apply Outfit front for all the html elements */
   font-family: outfits;
