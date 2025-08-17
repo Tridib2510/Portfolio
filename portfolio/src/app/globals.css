@@ -3,7 +3,24 @@
 @theme {
   --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
 }
+:root {
+  --darkTheme: #11001F;
+}
 
+/* Default light mode styles */
+body {
+  background-color: white;
+  color: black;
+  overflow-x: hidden; /* always apply this */
+}
+
+/* Dark mode styles, apply only when parent has .dark */
+.dark body {
+  background-color: var(--darkTheme);
+  color: white;
+}
+
+/* darkmode:'selector', */
 *{
   /* We select all the html elements and apply Outfit front for all the html elements */
   font-family: outfits;

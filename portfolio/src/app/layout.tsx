@@ -24,7 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
+      {/* whenever we remove this dark class from the className we get light mode else we get dark mode */}
       {/* Whem we click on any link now the scrolling is smooth */}
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8
