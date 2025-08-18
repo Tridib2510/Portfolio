@@ -54,7 +54,7 @@ const Contact = ({isDarkMode}:{isDarkMode:boolean}) => {
         whileInView={{opacity:1}}
         transition={{delay:0.7,duration:0.5}}
     className="text-center max-w-2xl mx-auto mt-5 mb-12">
-    I'd love to hear from you! If you have any questions,comments,or feedback please use the form below
+    I&apos;d love to hear from you! If you have any questions,comments,or feedback please use the form below
     </motion.p>
 
     <motion.form 
