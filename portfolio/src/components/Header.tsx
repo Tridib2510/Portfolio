@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
-const Header = () => {
+const Header = ({isDarkMode}:any) => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col
     items-center justify-center gap-4
@@ -23,15 +23,14 @@ const Header = () => {
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             
             <a href="#contact"
-            className='px-10 py-3 border border-white rounded-full bg-black
-           text-white flex items-center'
+            className={`px-10 py-3 border border-white rounded-full bg-black
+           text-white flex items-center gap-2 ${isDarkMode?'bg-transparent':''}`}
             >contact me <Image alt="" src={assets.right_arrow_white}/> </a>
             
              {/* download is used to download the pdf named sample-reusme in the public folder */}
              
              <a href="/sample-resume.pdf" download 
-             className='px-10 py-3 border rounded-full border-gray-500 flex 
-             items-center gap-2'
+             className={`px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 ${isDarkMode?'bg-white text-black':''} `}
              >my resume <Image alt="" src={assets.download_icon} 
             className='w-4'/> </a>
         </div>

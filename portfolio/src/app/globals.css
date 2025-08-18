@@ -6,6 +6,9 @@
 :root {
   --darkTheme: #11001F;
 }
+:root {
+  --darkHover: #11001F;
+}
 
 /* Default light mode styles */
 body {

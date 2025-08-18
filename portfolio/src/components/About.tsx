@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { assets, infoList ,toolsData} from '@/assets/assets'
-const About = () => {
+const About = ({isDarkMode}:any) => {
   return (
     // we add and id since when we click a link it scroll
     // to this about section
@@ -29,18 +29,17 @@ const About = () => {
         */}
         {infoList.map(({icon,iconDark,title,description},index)=>(
            <li key={index} 
-           className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor pointer hover:bg-purple-100 hover:-translate-y-1 duration-500 shadow-black hover:shadow-black hover:shadow-lg
-'//we try to change it's color and move it up when we hover over it
+           className={`border-[0.5px] border-gray-400 rounded-xl p-6 cursor pointer hover:bg-purple-100 hover:-translate-y-1 duration-500 shadow-black hover:shadow-black hover:shadow-lg ${isDarkMode?'border-white hover:shadow-white hover:bg-darkHover/50':''}`}//we try to change it's color and move it up when we hover over it
           //we also apply a shadow
           >
-            <Image src={icon} alt={title} className='w-7 mt-3' />
-            <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
-            <p className='text-gray-600 text-sm'>{description}</p>
+            <Image src={isDarkMode?iconDark:icon} alt={title} className='w-7 mt-3' />
+            <h3 className={`my-4 font-semibold text-gray-700 ${isDarkMode?'text-white':''}`}>{title}</h3>
+            <p className={`text-gray-600 text-sm ${isDarkMode?'text-white':''}`}>{description}</p>
            </li>
         ))}
       </ul>
       {/* Adding icons for the tools we use */}
-      <h4 className='my-6 text-gray-700 '>Tools I use</h4>
+      <h4 className={`my-6 text-gray-700 ${isDarkMode?'text-white/80':''}`}>Tools I use</h4>
       <ul className='flex items-center gap-3 sm:gap-5'>
         {toolsData.map((tool,index)=>(
           <li className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>

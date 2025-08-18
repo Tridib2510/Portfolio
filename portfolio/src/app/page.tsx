@@ -11,6 +11,20 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
   const [isDarkMode,setIsDarkMode]=useState(false)
+  
+  
+  useEffect(()=>{
+    // If the color scheme is dark in the system or we have the dark key 
+    // in the local storage
+    if (localStorage.theme==='dark' || (!('theme' in localStorage)&& window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+      setIsDarkMode(true)
+    }
+    else{
+      setIsDarkMode(false)
+    }
+  },[])
+
+
 
   useEffect(()=>{
     if(isDarkMode){
@@ -25,13 +39,13 @@ export default function Home() {
 
   return (
     <>
-    <Navbar/>
-    <Header />
-    <About />
-    <Services />
-    <Work />
-    <Contact />
-    <Footer />
+    <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+    <Header isDarkMode={isDarkMode} />
+    <About isDarkMode={isDarkMode} />
+    <Services isDarkMode={isDarkMode}/>
+    <Work isDarkMode={isDarkMode} />
+    <Contact isDarkMode={isDarkMode} />
+    <Footer isDarkMode={isDarkMode}/>
     </>
   );
 }
