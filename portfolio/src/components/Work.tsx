@@ -2,7 +2,7 @@ import { assets, workData } from '@/assets/assets'
 import React from 'react'
 import Image from 'next/image'
 import {motion} from "motion/react"
-const Work = ({isDarkMode}:any) => {
+const Work = ({isDarkMode}:{isDarkMode:boolean}) => {
   return (
     <motion.div 
      initial={{opacity:0}}

@@ -2,13 +2,15 @@ import { assets } from '@/assets/assets'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import {motion} from "motion/react"
-const Contact = ({isDarkMode}:any) => {
+import { FormEvent } from 'react'
+
+const Contact = ({isDarkMode}:{isDarkMode:boolean}) => {
   const [result, setResult] =useState("")
 
-  const onSubmit = async (event:any) => {
+  const onSubmit = async (event:FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
 
     formData.append("access_key", "1be9afab-6b76-46cd-9b82-798179bd3a00");
 
@@ -21,7 +23,9 @@ const Contact = ({isDarkMode}:any) => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
-      event.target.reset();
+      // event.target.reset();//NOT OKAY
+        (event.target as HTMLFormElement).reset();//OKAY
+
     } else {
       console.log("Error", data);
       setResult(data.message);

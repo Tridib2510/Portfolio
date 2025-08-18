@@ -2,7 +2,8 @@
 import React,{useEffect, useRef, useState} from 'react'
 import Image  from 'next/image'
 import {assets} from "@/assets/assets"
-const Navbar = ({isDarkMode,setIsDarkMode}:any) => {
+const Navbar = ({isDarkMode,setIsDarkMode}:{isDarkMode:boolean,setIsDarkMode:React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
 
 const [isScroll,setIsScroll]=useState(false)
 

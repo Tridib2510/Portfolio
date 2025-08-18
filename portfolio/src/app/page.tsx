@@ -10,8 +10,8 @@ import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 export default function Home() {
 
-  const [isDarkMode,setIsDarkMode]=useState(false)
-  
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   
   useEffect(()=>{
     // If the color scheme is dark in the system or we have the dark key 

@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import {motion} from "motion/react"
 import { assets, infoList ,toolsData} from '@/assets/assets'
-const About = ({isDarkMode}:any) => {
+const About = ({isDarkMode}:{isDarkMode:boolean}) => {
   return (
     // we add and id since when we click a link it scroll
     // to this about section

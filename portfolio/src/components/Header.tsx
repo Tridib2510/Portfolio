@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 import { motion } from "motion/react"
-const Header = ({isDarkMode}:any) => {
+const Header = ({isDarkMode}:{isDarkMode:boolean}) => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col
     items-center justify-center gap-4
