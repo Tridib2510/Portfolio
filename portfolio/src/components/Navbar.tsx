@@ -22,14 +22,22 @@ const sideMenuRef = useRef<HTMLUListElement>(null);//We use HTMLUListElement
  //based on this setIsScroll we will change the css
 //  property for the navigation bar
     useEffect(()=>{
-       window.addEventListener('scroll',()=>{
-        if(scrollY>50){
-            setIsScroll(true)
-        }else{
-         setIsScroll(false)
-        }
-       })
+       const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  // Cleanup function to remove the listener
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
     },[])
+    //don't directly use window.addEventListener inside useEffect
 
   return (
     <>
