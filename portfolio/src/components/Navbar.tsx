@@ -62,7 +62,7 @@ const sideMenuRef = useRef<HTMLUListElement>(null);//We use HTMLUListElement
         </ul>
         <div className='flex items-center gap-4'>
 
-        <button onClick={()=>setIsDarkMode((prev:any)=>!prev)}>
+        <button onClick={()=>setIsDarkMode((prev:boolean)=>!prev)}>
             <Image src={isDarkMode?assets.sun_icon:assets.moon_icon} alt='' className='w-6' />
         </button>
 
