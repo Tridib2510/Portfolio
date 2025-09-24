@@ -1,9 +1,27 @@
+"use client"
 import { assets, workData } from '@/assets/assets'
-import React from 'react'
+import React,{useState} from 'react'
 import Image from 'next/image'
 import {motion} from "motion/react"
+import Link from 'next/link'
+import { div } from 'motion/react-client'
 const Work = ({isDarkMode}:{isDarkMode:boolean}) => {
+  const [work,setWork]=useState(workData.slice(0,4))
+  const [showmore,setShowMore]=useState(false)
+
+  function showMore(){
+    setWork(workData)
+    setShowMore(true)
+  }
+
+  function showLess(){
+    setWork(workData.slice(0,4))
+    setShowMore(false)
+  }
+
+
   return (
+    
     <motion.div 
      initial={{opacity:0}}
         whileInView={{opacity:1}}
@@ -33,32 +51,54 @@ const Work = ({isDarkMode}:{isDarkMode:boolean}) => {
         whileInView={{opacity:1}}
         transition={{delay:0.9,duration:0.6}}
     className={`grid grid-cols-auto my-10 gap-5 ${isDarkMode?'text-black':''}`}>
-        {workData.map((project,index)=>(
+        {work.map((project,index)=>(
+          <div
+          key={index}
+          >
             <motion.div
-            whileHover={{scale:1.05}}
-            transition={{duration:0.3}}
-            key={index}
-            className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
-            style={{backgroundImage:`url(${project.bgImage})`}}>
-           <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>
-             <div>
-                <h2 className='font-semibold'>{project.title}</h2>
-                <p className='text-sm text-gray-700'>{project.description}</p>
+  whileHover={{ scale: 1.05 }}
+  transition={{ duration: 0.3 }}
+  className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+  style={{ backgroundImage: `url(${project.bgImage})` }}
+>
+  <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+    <div>
+      <h2 className="font-semibold">{project.title}</h2>
+      <p className="text-sm text-gray-700">{project.description}</p>
+    </div>
+
+    <div className="flex gap-3">
+      
+      {/* noopener noreferrer is needed for security */}
+      <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+        <Link href={project.github} target="_blank" rel="noopener noreferrer">
+   
+    <Image src={assets.github_logo} alt="GitHub icon" className="w-5" />
+    
+        </Link>
+      </div>
+
+      
+      <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+        <Link href={project.link} target="_blank" rel="noopener noreferrer">
+          <Image src={assets.send_icon} alt="Live link icon" className="w-5" />
+        </Link>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
+          
             </div>
-             <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
-                <Image src={assets.send_icon} alt="send icon" className='w-5'/>
-             </div>
-           </div>
-           
-            </motion.div>
         ))}
     </motion.div>
     <motion.a
+    onClick={showmore===false?showMore:showLess}
      initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{delay:1.1,duration:0.5}}
-    href="" className={`w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 ${isDarkMode?'text-white border-white hover:bg-violet-950':""}`}>
-        Show more <Image src={isDarkMode?assets.right_arrow_bold_dark:assets.right_arrow_bold} alt="Right arrow" className='w-4'/>
+    href="#work" className={`w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 ${isDarkMode?'text-white border-white hover:bg-violet-950':""}`}>
+      {showmore===false?'Show more':'Show less'} <Image src={isDarkMode?assets.right_arrow_bold_dark:assets.right_arrow_bold} alt="Right arrow" className='w-4'/>
     </motion.a>
     </motion.div>
   )

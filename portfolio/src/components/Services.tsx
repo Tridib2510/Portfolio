@@ -47,7 +47,7 @@ const Services = ({isDarkMode}:{isDarkMode:boolean}) => {
            <p className={`text-sm text-gray-600 leading-5 ${isDarkMode?'text-white/80':''}`}>
             {description}
            </p>
-           <a href={link} className='flex items-center gap-2 text-sm mt-5'>
+           <a href={link}  target="_blank" className='flex items-center gap-2 text-sm mt-5'>
             Read more <Image src={assets.right_arrow} alt="" className='w-4'/>
            </a>
         </motion.div>

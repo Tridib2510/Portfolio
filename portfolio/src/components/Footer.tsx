@@ -18,7 +18,7 @@ const Footer = ({isDarkMode}:{isDarkMode:boolean}) => {
         <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
             <li><a target='_blank' href="https://github.com/Tridib2510">Github</a></li>
         {/* target='_blank' opens the page in a new tab */}
-            <li><a target='_blank' href="https://www.linkedin.com/in/tridib-roy-chowdhury-13a9b42a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></li>
+            <li><a target='_blank' href="https://www.linkedin.com/in/tridib-roy-chowdhury-665a9529a/">LinkedIn</a></li>
             <li><a target='_blank' href="https://x.com/Tridib2510">Twitter</a></li>
 
 

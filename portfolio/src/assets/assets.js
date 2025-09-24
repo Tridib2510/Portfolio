@@ -29,15 +29,24 @@ import close_black from './close-black.png';
 import close_white from './close-white.png';
 import web_icon from './web-icon.png';
 import mobile_icon from './mobile-icon.png';
+import machine_learning from './machine_learning.png';
+import machine_learning_dark from './machine_learning_dark.png'
 import ui_icon from './ui-icon.png';
 import graphics_icon from './graphics-icon.png';
 import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import { desc } from 'motion/react-client';
+import postgress from "./postgress.png";
+import backend_logo_dark from './backend_logo_dark.png'
+import backend_logo from './backend_logo.png'
+import github_logo from './github_logo.png'
 
 export const assets = {
     user_image,
+    backend_logo,
+    github_logo,
     code_icon,
     code_icon_dark,
     edu_icon,
@@ -45,6 +54,7 @@ export const assets = {
     project_icon,
     project_icon_dark,
     vscode,
+    backend_logo_dark,
     firebase,
     figma,
     git,
@@ -73,45 +83,127 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    postgress,
+    machine_learning,
+    machine_learning_dark
 };
 
 export const workData = [
+    // {
+    //     title: 'Frontend project',
+    //     description: 'Web Design',
+    //     bgImage: '/work-1.png',
+    // },
+    // {
+    //     title: 'Geo based app',
+    //     description: 'Mobile App',
+    //     bgImage: '/work-2.png',
+    // },
+    // {
+    //     title: 'Photography site',
+    //     description: 'Web Design',
+    //     bgImage: '/work-3.png',
+    // },
+    // {
+    //     title: 'UI/UX designing',
+    //     description: 'UI/UX Design',
+    //     bgImage: '/work-4.png',
+    // },
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title:'Network Security Project',
+        description:'ML Project',
+        bgImage:'/work-11.png',
+        link:'https://github.com/Tridib2510/networksecurity',
+        github:'https://github.com/Tridib2510/Todolist'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title:'AI Therapist',
+        description:'ML Project',
+        bgImage:'/work-7.png',
+        link:'https://sih-prototype-mental-health-1.onrender.com/',
+        github:'https://github.com/Tridib2510/AI-based-Therapist'
+
+
+    },
+     {
+        title:'Forest fire prediction',
+        description:'ML Project',
+        bgImage:'/work-10.png',
+        link:'https://forest-fires-1.onrender.com/predictdata',
+        github:'https://github.com/Tridib2510/forest-fires'
+        
+    },
+   {
+    title:'Full-stack sports event platform',
+    description:'Fullstack Project',
+    bgImage:'/work-13.png',
+    link:'https://kickit-app.vercel.app/',
+    github:'https://github.com/Tridib2510/KickIts'
+   },
+   {
+    title:'Portfolio',
+    description:'Frontend Project',
+    bgImage:'/work-14.png',
+    link:'https://portfolio-livid-pi-12wuho7vgj.vercel.app/',
+    github:'https://github.com/Tridib2510/Portfolio'
+   },
+    {
+        title: 'Todo list',
+        description: 'Frontend Project',
+        bgImage: '/work-5.png',
+        link:'https://todolist-indol-mu.vercel.app/',
+        github:'https://github.com/Tridib2510/Todolist'
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title:'Quiz app',
+        description:'Frontend Project',
+        bgImage:'/work-6.png',
+        link:'https://quiz-7a6hkautd-tridib2510s-projects.vercel.app/',
+        github:'https://github.com/Tridib2510/quiz-app'
+
+    },
+    
+    {
+        title:'weather app',
+        description:'Frontend Project',
+        bgImage:'/work-8.png',
+        link:'https://weather-app-iota-five-27.vercel.app/',
+        github:'https://github.com/Tridib2510/Weather-app'
+
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title:'Authentication System',
+        description:'Backend Project',
+        bgImage:'/work-9.png',
+        link:'https://authentication-system-zeta-lilac.vercel.app/login',
+        github:'https://github.com/Tridib2510/authentication-system'
+
     },
+     {
+        title:'Password Generator',
+        description:'Frontend Project',
+        bgImage:'/work-12.png',
+        link:'https://passwordgenerator-two-orcin.vercel.app/',
+        github:'https://github.com/Tridib2510/passwordGenerator'
+
+    }
+    
+
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Fullstack Development', description: 'I have hands-on experience in web development, working across both frontend and backend technologies to build responsive and user-friendly applications...', link: 'https://developer.mozilla.org/en-US/docs/Learn/Server-side' },
+    { icon: assets.mobile_icon, title: 'Machine Learning', description: 'Machine Learning is the science of making computers learn patterns from data and improve their performance on tasks without being explicitly programmed...', link: '' },
+   
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Frontend', description: 'HTML, CSS, Tailswind, Javascript, Typescript, React Js, Next Js' },
+    { icon: assets.backend_logo, iconDark: assets.backend_logo_dark, title: 'Backend', description: 'Express, Flask , FastAPI' },
+    { icon: assets.machine_learning, iconDark: assets.machine_learning_dark, title: 'Machine Learning', description: 'Python, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, BentoML, MLflow' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.firebase, assets.mongodb,assets.postgress, assets.git,
 ];
