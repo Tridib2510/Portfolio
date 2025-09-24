@@ -117,7 +117,7 @@ export const workData = [
         description:'ML Project',
         bgImage:'/work-11.png',
         link:'https://github.com/Tridib2510/networksecurity',
-        github:'https://github.com/Tridib2510/Todolist'
+        github:'https://github.com/Tridib2510/networksecurity'
     },
     {
         title:'AI Therapist',
