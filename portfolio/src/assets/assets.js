@@ -14,6 +14,7 @@ import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
+import docker_icon from './docker_logo.avif'
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.jpeg';
 import download_icon from './download-icon.png';
@@ -69,6 +70,7 @@ export const assets = {
     hand_icon,
     header_bg_color,
     moon_icon,
+    docker_icon,
     sun_icon,
     arrow_icon,
     arrow_icon_dark,
@@ -205,5 +207,5 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb,assets.postgress, assets.git,
+    assets.vscode, assets.firebase, assets.mongodb,assets.postgress, assets.git,assets.docker_icon
 ];
