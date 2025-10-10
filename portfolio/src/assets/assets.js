@@ -112,6 +112,13 @@ export const workData = [
     //     description: 'UI/UX Design',
     //     bgImage: '/work-4.png',
     // },
+      {
+    title:'Full-stack sports event platform',
+    description:'Fullstack Project',
+    bgImage:'/work-15.png',
+    link:'https://kick-it-version3-0.vercel.app/',
+    github:'https://github.com/Tridib2510/KickItVersion3.0'
+   },
     {
         title:'Network Security Project',
         description:'ML Project',
@@ -136,13 +143,7 @@ export const workData = [
         github:'https://github.com/Tridib2510/forest-fires'
         
     },
-   {
-    title:'Full-stack sports event platform',
-    description:'Fullstack Project',
-    bgImage:'/work-13.png',
-    link:'https://kickit-app.vercel.app/',
-    github:'https://github.com/Tridib2510/KickIts'
-   },
+ 
    {
     title:'Portfolio',
     description:'Frontend Project',
