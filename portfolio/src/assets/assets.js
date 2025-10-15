@@ -112,20 +112,29 @@ export const workData = [
     //     description: 'UI/UX Design',
     //     bgImage: '/work-4.png',
     // },
-      {
-    title:'Full-stack sports event platform',
-    description:'Fullstack Project',
-    bgImage:'/work-15.png',
-    link:'https://kick-it-version3-0.vercel.app/',
-    github:'https://github.com/Tridib2510/KickItVersion3.0'
-   },
+      
     {
         title:'Network Security Project',
-        description:'ML Project',
+        description:'MLOPS Project',
         bgImage:'/work-11.png',
         link:'https://github.com/Tridib2510/networksecurity',
         github:'https://github.com/Tridib2510/networksecurity'
     },
+    {
+        title:'IMDB Movie Review Sentiment Analysis',
+        description:'ML Project',
+        bgImage:'/work-16.png',
+        link:'https://imdb-movie-review-kuomjwgzhkhrjjxzxfee9r.streamlit.app/',
+        github:'https://github.com/Tridib2510/IMDB-Movie-Review'
+    },
+    {
+        title:'Customer Churn Prediction',
+        description:'ML Project',
+        bgImage:'/work-17.png',
+        link:'https://annclassificationchurn-np76sc3a9jcisjytle8saa.streamlit.app/',
+        github:'https://github.com/Tridib2510/ANN_Classification_Churn'
+    },
+
     {
         title:'AI Therapist',
         description:'ML Project',
@@ -143,6 +152,14 @@ export const workData = [
         github:'https://github.com/Tridib2510/forest-fires'
         
     },
+
+    {
+    title:'Full-stack sports event platform',
+    description:'Fullstack Project',
+    bgImage:'/work-15.png',
+    link:'https://kick-it-version3-0.vercel.app/',
+    github:'https://github.com/Tridib2510/KickItVersion3.0'
+   },
  
    {
     title:'Portfolio',
