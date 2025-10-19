@@ -134,6 +134,13 @@ export const workData = [
         link:'https://annclassificationchurn-np76sc3a9jcisjytle8saa.streamlit.app/',
         github:'https://github.com/Tridib2510/ANN_Classification_Churn'
     },
+     {
+        title:'Next Word Prediction',
+        description:'ML Project',
+        bgImage:'/work-18.png',
+        link:'https://next-word-prediction-gaexovrqd3mrqzqv2uhgpa.streamlit.app/',
+        github:'https://github.com/Tridib2510/Next-Word-Prediction'
+    },
 
     {
         title:'AI Therapist',
