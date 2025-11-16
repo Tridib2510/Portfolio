@@ -115,28 +115,28 @@ export const workData = [
       
     {
         title:'Network Security Project',
-        description:'MLOPS Project',
+        description:'MLOPS    Python    FastAPI    Uvicorn    Scikit-learn    Pandas   Numpy   MLflow   Docker',
         bgImage:'/work-11.png',
         link:'https://github.com/Tridib2510/networksecurity',
         github:'https://github.com/Tridib2510/networksecurity'
     },
     {
         title:'IMDB Movie Review Sentiment Analysis',
-        description:'ML Project',
+        description:'Python  TensorFlow  Keras  Streamlit  NumPy  Pandas  Matplotlib  Seaborn',
         bgImage:'/work-16.png',
         link:'https://imdb-movie-review-kuomjwgzhkhrjjxzxfee9r.streamlit.app/',
         github:'https://github.com/Tridib2510/IMDB-Movie-Review'
     },
     {
         title:'Customer Churn Prediction',
-        description:'ML Project',
+        description:'Tensorflow  Python  Pandas NumPy  Matplotlib  Seaborn ',
         bgImage:'/work-17.png',
         link:'https://annclassificationchurn-np76sc3a9jcisjytle8saa.streamlit.app/',
         github:'https://github.com/Tridib2510/ANN_Classification_Churn'
     },
      {
         title:'Next Word Prediction',
-        description:'ML Project',
+        description:'Tensorflow  keras  LSTM  nltk  flask  pickle',
         bgImage:'/work-18.png',
         link:'https://next-word-prediction-gaexovrqd3mrqzqv2uhgpa.streamlit.app/',
         github:'https://github.com/Tridib2510/Next-Word-Prediction'
@@ -144,7 +144,7 @@ export const workData = [
 
     {
         title:'AI Therapist',
-        description:'ML Project',
+        description:'Python  Pandas  Numpy  Flask  Scikit-learn',
         bgImage:'/work-7.png',
         link:'https://sih-prototype-mental-health-1.onrender.com/',
         github:'https://github.com/Tridib2510/AI-based-Therapist'
@@ -153,7 +153,7 @@ export const workData = [
     },
      {
         title:'Forest fire prediction',
-        description:'ML Project',
+        description:'Python  Scikit-learn  Pandas  NumPy  Flask',
         bgImage:'/work-10.png',
         link:'https://forest-fires-1.onrender.com/predictdata',
         github:'https://github.com/Tridib2510/forest-fires'
@@ -162,7 +162,7 @@ export const workData = [
 
     {
     title:'Full-stack sports event platform',
-    description:'Fullstack Project',
+    description:'React.js  Node.js  express   MongoDB  Socket.IO  JWT  OAuth 2.0',
     bgImage:'/work-15.png',
     link:'https://kick-it-version3-0.vercel.app/',
     github:'https://github.com/Tridib2510/KickItVersion3.0'
@@ -170,21 +170,21 @@ export const workData = [
  
    {
     title:'Portfolio',
-    description:'Frontend Project',
+    description:'Next js, Typescript',
     bgImage:'/work-14.png',
     link:'https://portfolio-livid-pi-12wuho7vgj.vercel.app/',
     github:'https://github.com/Tridib2510/Portfolio'
    },
     {
         title: 'Todo list',
-        description: 'Frontend Project',
+        description: 'React+Vite',
         bgImage: '/work-5.png',
         link:'https://todolist-indol-mu.vercel.app/',
         github:'https://github.com/Tridib2510/Todolist'
     },
     {
         title:'Quiz app',
-        description:'Frontend Project',
+        description:'Javascript',
         bgImage:'/work-6.png',
         link:'https://quiz-7a6hkautd-tridib2510s-projects.vercel.app/',
         github:'https://github.com/Tridib2510/quiz-app'
@@ -193,7 +193,7 @@ export const workData = [
     
     {
         title:'weather app',
-        description:'Frontend Project',
+        description:'Javascript',
         bgImage:'/work-8.png',
         link:'https://weather-app-iota-five-27.vercel.app/',
         github:'https://github.com/Tridib2510/Weather-app'
@@ -201,7 +201,7 @@ export const workData = [
     },
     {
         title:'Authentication System',
-        description:'Backend Project',
+        description:'Next.js',
         bgImage:'/work-9.png',
         link:'https://authentication-system-zeta-lilac.vercel.app/login',
         github:'https://github.com/Tridib2510/authentication-system'
@@ -209,7 +209,7 @@ export const workData = [
     },
      {
         title:'Password Generator',
-        description:'Frontend Project',
+        description:'Javascript',
         bgImage:'/work-12.png',
         link:'https://passwordgenerator-two-orcin.vercel.app/',
         github:'https://github.com/Tridib2510/passwordGenerator'

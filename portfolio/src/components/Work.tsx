@@ -4,7 +4,7 @@ import React,{useState} from 'react'
 import Image from 'next/image'
 import {motion} from "motion/react"
 import Link from 'next/link'
-import { div } from 'motion/react-client'
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 const Work = ({isDarkMode}:{isDarkMode:boolean}) => {
   const [work,setWork]=useState(workData.slice(0,4))
   const [showmore,setShowMore]=useState(false)
@@ -50,8 +50,9 @@ const Work = ({isDarkMode}:{isDarkMode:boolean}) => {
      initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{delay:0.9,duration:0.6}}
-    className={`grid grid-cols-auto my-10 gap-5 ${isDarkMode?'text-black':''}`}>
-        {work.map((project,index)=>(
+      className={`grid grid-cols-1 sm:grid-cols-2 my-10 gap-5 ${isDarkMode ? 'text-black' : ''}`}
+>
+        {/* {work.map((project,index)=>(
           <div
           key={index}
           >
@@ -67,10 +68,10 @@ const Work = ({isDarkMode}:{isDarkMode:boolean}) => {
       <p className="text-sm text-gray-700">{project.description}</p>
     </div>
 
-    <div className="flex gap-3">
+    <div className="flex gap-3"> */}
       
       {/* noopener noreferrer is needed for security */}
-      <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+      {/* <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
         <Link href={project.github} target="_blank" rel="noopener noreferrer">
    
     <Image src={assets.github_logo} alt="GitHub icon" className="w-5" />
@@ -88,6 +89,68 @@ const Work = ({isDarkMode}:{isDarkMode:boolean}) => {
   </div>
 </motion.div>
 
+          
+            </div>
+        ))} */}
+
+
+         {work.map((project,index)=>(
+          <div
+          key={index}
+          >
+           
+          <CardContainer className="inter-var">
+                <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold text-neutral-600 dark:text-white"
+                  >
+                   {project.title}
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    {project.description}
+                  </CardItem>
+                  <CardItem
+                    translateZ="100"
+                    rotateX={20}
+                    rotateZ={-10}
+                    className="w-full mt-4"
+                  >
+                    <img
+                    src={project.bgImage}
+                      height="1000"
+                      width="1000"
+                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                      alt="thumbnail"
+                    />
+                  </CardItem>
+                  <div className="flex justify-between items-center mt-20">
+                    <CardItem
+                      translateZ={20}
+                      translateX={-40}
+                      as="button"
+                      className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white cursor-pointer"
+                    >
+                       <Link href={project.link}>Try now →</Link>
+                      
+                    </CardItem>
+                    <CardItem
+                      translateZ={20}
+                      translateX={40}
+                      as="button"
+                      className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold cursor-pointer"
+                    >
+                      <Link href={project.github}>
+                      <Image src={assets.github_logo}  alt="GitHub icon" className="w-5" />
+                      </Link>
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </CardContainer>
           
             </div>
         ))}
