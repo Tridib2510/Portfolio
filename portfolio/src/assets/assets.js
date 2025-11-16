@@ -228,7 +228,7 @@ export const serviceData = [
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Frontend', description: 'HTML, CSS, Tailswind, Javascript, Typescript, React Js, Next Js' },
     { icon: assets.backend_logo, iconDark: assets.backend_logo_dark, title: 'Backend', description: 'Express, Flask , FastAPI' },
-    { icon: assets.machine_learning, iconDark: assets.machine_learning_dark, title: 'Machine Learning', description: 'Python, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, BentoML, MLflow' }
+    { icon: assets.machine_learning, iconDark: assets.machine_learning_dark, title: 'Machine Learning', description: 'Python, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, BentoML, MLflow, Tensorflow' }
 ];
 
 export const toolsData = [
