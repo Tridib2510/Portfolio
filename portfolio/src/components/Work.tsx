@@ -120,7 +120,7 @@ const Work = ({isDarkMode}:{isDarkMode:boolean}) => {
                     rotateZ={-10}
                     className="w-full mt-4"
                   >
-                    <img
+                    <Image
                     src={project.bgImage}
                       height="1000"
                       width="1000"
