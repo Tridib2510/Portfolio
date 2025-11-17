@@ -38,25 +38,31 @@ const About = ({isDarkMode}:{isDarkMode:boolean}) => {
         {/* <Image alt="user" src={assets.user_image} 
         className='w-full rounded-3xl'
         /> */}
-       <PixelatedCanvas
-    src={assets.user_image}
-    width={300}
-    height={300}
-    className="w-full h-full rounded-xl shadow-lg"
-    cellSize={4}
-    dotScale={0.9}
-    shape="square"
-    backgroundColor="#000000"
-    dropoutStrength={0.1}
-    interactive
-    distortionStrength={0.1}
-    distortionRadius={200}
-    distortionMode="repel"
-    followSpeed={0.2}
-    jitterStrength={4}
-    jitterSpeed={1}
-    sampleAverage
-  />
+      <div className="w-full max-w-sm mx-auto">
+  <div className="aspect-square w-full">
+    <PixelatedCanvas
+      src={assets.user_image}
+      width={300}              // internal resolution
+      height={300}             // scales responsively
+      className="w-full h-full rounded-xl shadow-lg"
+      cellSize={4}
+      dotScale={0.9}
+      shape="square"
+      backgroundColor="#000000"
+      dropoutStrength={0.1}
+      interactive
+      distortionStrength={0.1}
+      distortionRadius={200}
+      distortionMode="repel"
+      followSpeed={0.2}
+      jitterStrength={4}
+      jitterSpeed={1}
+      sampleAverage
+    />
+  </div>
+</div>
+
+
     </motion.div>
     <motion.div 
     initial={{opacity:0}}
