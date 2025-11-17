@@ -42,8 +42,8 @@ const About = ({isDarkMode}:{isDarkMode:boolean}) => {
   <div className="aspect-square w-full">
     <PixelatedCanvas
       src={assets.user_image}
-      width={300}              // internal resolution
-      height={300}             // scales responsively
+      width={250}              // internal resolution
+      height={250}             // scales responsively
       className="w-full h-full rounded-xl shadow-lg"
       cellSize={4}
       dotScale={0.9}
