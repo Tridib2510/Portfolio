@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import {motion} from "motion/react"
 import { assets, infoList ,toolsData} from '@/assets/assets'
+import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
+
 const About = ({isDarkMode}:{isDarkMode:boolean}) => {
   return (
     // we add and id since when we click a link it scroll
@@ -33,9 +35,28 @@ const About = ({isDarkMode}:{isDarkMode:boolean}) => {
         whileInView={{opacity:1,scale:1}}
         transition={{duration:0.6}}
     className='w-64 sm:w-80 rounded-3xl max-w-none'>
-        <Image alt="user" src={assets.user_image} 
+        {/* <Image alt="user" src={assets.user_image} 
         className='w-full rounded-3xl'
-        />
+        /> */}
+       <PixelatedCanvas
+    src={assets.user_image}
+    width={300}
+    height={300}
+    className="w-full h-full rounded-xl shadow-lg"
+    cellSize={4}
+    dotScale={0.9}
+    shape="square"
+    backgroundColor="#000000"
+    dropoutStrength={0.1}
+    interactive
+    distortionStrength={0.1}
+    distortionRadius={200}
+    distortionMode="repel"
+    followSpeed={0.2}
+    jitterStrength={4}
+    jitterSpeed={1}
+    sampleAverage
+  />
     </motion.div>
     <motion.div 
     initial={{opacity:0}}
