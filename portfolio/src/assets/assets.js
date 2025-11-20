@@ -135,10 +135,17 @@ export const workData = [
     },
      {
         title:'Next Word Prediction',
-        description:'Tensorflow  keras  LSTM  nltk  flask  pickle',
+        description:'Tensorflow  keras  LSTM  nltk  Flask  pickle',
         bgImage:'/work-18.png',
         link:'https://next-word-prediction-gaexovrqd3mrqzqv2uhgpa.streamlit.app/',
         github:'https://github.com/Tridib2510/Next-Word-Prediction'
+    },
+    {
+       title:'Anime Notify Chrome Extension',
+       description:'Typescript  HTML  CSS  Chrome Extensions API  Python Flask BeautifulSoup',
+        bgImage:'/work-19.png',
+        link:'https://github.com/Tridib2510/Anime-notifier',
+        github:'https://github.com/Tridib2510/Anime-notifier'
     },
 
     {
