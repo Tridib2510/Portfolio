@@ -6,6 +6,8 @@ import Services from "@/components/Services";
 import Work from "@/components/Work"
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 import { useEffect, useState } from "react";
 export default function Home() {
 
@@ -38,13 +40,38 @@ export default function Home() {
 
   return (
     <>
-    <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-    <Header isDarkMode={isDarkMode} />
-    <About isDarkMode={isDarkMode} />
-    <Services isDarkMode={isDarkMode}/>
-    <Work isDarkMode={isDarkMode} />
-    <Contact isDarkMode={isDarkMode} />
-    <Footer isDarkMode={isDarkMode}/>
+      {isDarkMode && (
+        <>
+          <StarsBackground
+            starDensity={0.00015}
+            allStarsTwinkle={true}
+            twinkleProbability={0.7}
+            minTwinkleSpeed={0.5}
+            maxTwinkleSpeed={1}
+            className="fixed inset-0"
+          />
+          <ShootingStars
+            minSpeed={10}
+            maxSpeed={30}
+            minDelay={4200}
+            maxDelay={8700}
+            starColor="#9E00FF"
+            trailColor="#2EB9DF"
+            starWidth={10}
+            starHeight={1}
+            className="fixed inset-0"
+          />
+        </>
+      )}
+      <div className="relative z-10">
+        <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+        <Header isDarkMode={isDarkMode} />
+        <About isDarkMode={isDarkMode} />
+        <Services isDarkMode={isDarkMode}/>
+        <Work isDarkMode={isDarkMode} />
+        <Contact isDarkMode={isDarkMode} />
+        <Footer isDarkMode={isDarkMode}/>
+      </div>
     </>
   );
 }
