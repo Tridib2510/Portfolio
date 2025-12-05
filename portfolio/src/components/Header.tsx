@@ -31,14 +31,13 @@ const Header = ({isDarkMode}:{isDarkMode:boolean}) => {
         whileInView={{y:0,opacity:1}}
         transition={{duration:0.8,delay:0.5}}
     className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'>
-        Full Stack Web Developer based in India.</motion.h1>
+        Software Developer based in India.</motion.h1>
         <motion.p 
         initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{duration:0.6,delay:0.7}}
         className='max-w-2xl mx-auto font-ovo'>
-    I am a fullstack developer with knowledge about AI and 
-    Machine Learning
+    I am a Software Developer with knowledge about AI, Machine Learning and Generative AI
         </motion.p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             

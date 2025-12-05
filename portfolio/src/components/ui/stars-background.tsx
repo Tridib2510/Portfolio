@@ -49,7 +49,7 @@ export const StarsBackground: React.FC<StarsBackgroundProps> = ({
         star.style.height = `${size}px`;
         star.style.backgroundColor = "white";
         star.style.borderRadius = "50%";
-        star.style.opacity = Math.random() * 0.5 + 0.5;
+        star.style.opacity = (Math.random() * 0.5 + 0.5).toString();
 
         if (willTwinkle) {
           star.style.animation = `twinkle ${twinkleSpeed}s ease-in-out infinite`;

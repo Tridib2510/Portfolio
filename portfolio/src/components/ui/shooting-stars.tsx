@@ -27,7 +27,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
   className,
 }) => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
   const starsRef = useRef<Array<{
     element: SVGLineElement;
     gradient: SVGGradientElement;
