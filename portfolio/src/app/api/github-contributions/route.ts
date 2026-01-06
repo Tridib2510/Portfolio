@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+export const runtime = "nodejs";
 
 interface Contribution {
   date: string;
@@ -22,138 +22,128 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const username = searchParams.get("username") || "Tridib2510";
 
-  return fetchContributionsAlternative(username);
+  return fetchContributions(username);
 }
 
-async function fetchContributionsAlternative(username: string) {
+async function fetchContributions(username: string) {
   try {
     const contributions: Contribution[] = [];
 
     /* ---------------- Method 1: jogruber.de ---------------- */
     try {
-      const apiResponse = await fetch(
+      const res = await fetch(
         `https://github-contributions-api.jogruber.de/v4/${username}`,
-        { headers: { "User-Agent": "Portfolio-App" } }
+        {
+          headers: { "User-Agent": "Portfolio-App" },
+          next: { revalidate: 3600 },
+        }
       );
 
-      if (apiResponse.ok) {
-        const apiData: JogruberResponse = await apiResponse.json();
+      if (res.ok) {
+        const data: JogruberResponse = await res.json();
 
-        if (Array.isArray(apiData.contributions)) {
-          apiData.contributions.forEach((item) => {
-            if (item.date && typeof item.count === "number") {
-              contributions.push({ date: item.date, count: item.count });
-            }
-          });
-        } else if (apiData.contributions) {
-          Object.entries(apiData.contributions).forEach(([date, count]) => {
+        if (Array.isArray(data.contributions)) {
+          for (const { date, count } of data.contributions) {
+            contributions.push({ date, count });
+          }
+        } else if (data.contributions) {
+          for (const [date, count] of Object.entries(data.contributions)) {
             if (typeof count === "number") {
               contributions.push({ date, count });
             }
-          });
+          }
         }
 
-        if (contributions.length > 0) {
+        if (contributions.length) {
           contributions.sort(sortByDate);
-          return NextResponse.json({ contributions });
+          return Response.json({ contributions });
         }
       }
-    } catch {
-      // silently fail and try next method
-    }
+    } catch {}
 
     /* ---------------- Method 2: deno.dev ---------------- */
     try {
-      const apiResponse = await fetch(
+      const res = await fetch(
         `https://github-contributions-api.deno.dev/${username}.json`,
-        { headers: { "User-Agent": "Portfolio-App" } }
+        {
+          headers: { "User-Agent": "Portfolio-App" },
+          next: { revalidate: 3600 },
+        }
       );
 
-      if (apiResponse.ok) {
-        const apiData: DenoResponse = await apiResponse.json();
+      if (res.ok) {
+        const data: DenoResponse = await res.json();
 
-        if (apiData.contributions) {
-          Object.entries(apiData.contributions).forEach(([date, count]) => {
+        if (data.contributions) {
+          for (const [date, count] of Object.entries(data.contributions)) {
             if (typeof count === "number") {
               contributions.push({ date, count });
             }
-          });
+          }
 
-          if (contributions.length > 0) {
+          if (contributions.length) {
             contributions.sort(sortByDate);
-            return NextResponse.json({ contributions });
+            return Response.json({ contributions });
           }
         }
       }
-    } catch {
-      // silently fail
-    }
+    } catch {}
 
-    /* ---------------- Method 3: activity graph (skipped) ---------------- */
-    // SVG only – intentionally skipped
-
-    /* ---------------- Method 4: GitHub HTML scrape ---------------- */
+    /* ---------------- Method 3: GitHub HTML scrape ---------------- */
     try {
-      const response = await fetch(
+      const res = await fetch(
         `https://github.com/users/${username}/contributions`,
         {
           headers: {
-            "User-Agent":
-              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "User-Agent": "Mozilla/5.0",
             Accept: "text/html",
           },
+          next: { revalidate: 3600 },
         }
       );
 
-      if (response.ok) {
-        const html = await response.text();
+      if (res.ok) {
+        const html = await res.text();
         const regex =
           /data-date="(\d{4}-\d{2}-\d{2})"[^>]*data-count="(\d+)"/g;
 
         const seen = new Set<string>();
         let match: RegExpExecArray | null;
 
-        while ((match = regex.exec(html)) !== null) {
-          const date = match[1];
-          const count = Number(match[2]);
-
-          if (!seen.has(date)) {
-            contributions.push({ date, count });
-            seen.add(date);
+        while ((match = regex.exec(html))) {
+          if (!seen.has(match[1])) {
+            contributions.push({
+              date: match[1],
+              count: Number(match[2]),
+            });
+            seen.add(match[1]);
           }
         }
 
-        if (contributions.length > 0) {
+        if (contributions.length) {
           contributions.sort(sortByDate);
-          return NextResponse.json({ contributions });
+          return Response.json({ contributions });
         }
       }
-    } catch {
-      // silently fail
+    } catch {}
+
+    /* ---------------- Final fallback ---------------- */
+    const today = new Date();
+    for (let i = 364; i >= 0; i--) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      contributions.push({
+        date: d.toISOString().split("T")[0],
+        count: 0,
+      });
     }
 
-    /* ---------------- Final fallback: empty year ---------------- */
-    if (contributions.length === 0) {
-      const today = new Date();
-      for (let i = 370; i >= 0; i--) {
-        const d = new Date(today);
-        d.setDate(d.getDate() - i);
-        contributions.push({
-          date: d.toISOString().split("T")[0],
-          count: 0,
-        });
-      }
-    }
-
-    contributions.sort(sortByDate);
-    return NextResponse.json({ contributions });
-  } catch (error) {
-    return NextResponse.json(
+    return Response.json({ contributions });
+  } catch (err) {
+    return Response.json(
       {
         error:
-          error instanceof Error
-            ? error.message
-            : "Unknown error occurred",
+          err instanceof Error ? err.message : "Unknown error occurred",
       },
       { status: 500 }
     );
