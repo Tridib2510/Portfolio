@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
+import GithubContributions from "@/components/GithubContributions";
 import { useEffect, useState } from "react";
 export default function Home() {
 
@@ -68,6 +69,7 @@ export default function Home() {
         <Header isDarkMode={isDarkMode} />
         <About isDarkMode={isDarkMode} />
         <Services isDarkMode={isDarkMode}/>
+        <GithubContributions isDarkMode={isDarkMode} username="Tridib2510" />
         <Work isDarkMode={isDarkMode} />
         <Contact isDarkMode={isDarkMode} />
         <Footer isDarkMode={isDarkMode}/>

@@ -120,6 +120,13 @@ export const workData = [
         github:'https://github.com/Tridib2510/networksecurity'
     },
     {
+        title:'GenAI Search Engine with Langchain',
+        description:'Python    Langchain   Streamlit    LLM',
+        bgImage:'/work-20.png',
+        link:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
+        github:'https://search-engine-genai-app.onrender.com/'
+    },
+    {
         title:'IMDB Movie Review Sentiment Analysis',
         description:'Python  TensorFlow  Keras  Streamlit  NumPy  Pandas  Matplotlib  Seaborn',
         bgImage:'/work-16.png',
