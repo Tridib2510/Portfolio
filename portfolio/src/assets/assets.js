@@ -123,8 +123,8 @@ export const workData = [
         title:'GenAI Search Engine with Langchain',
         description:'Python    Langchain   Streamlit    LLM',
         bgImage:'/work-20.png',
-        link:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
-        github:'https://search-engine-genai-app.onrender.com/'
+        github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
+        link:'https://search-engine-genai-app.onrender.com/'
     },
     {
         title:'IMDB Movie Review Sentiment Analysis',
