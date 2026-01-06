@@ -26,6 +26,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
   starHeight = 1,
   className,
 }) => {
+  console.log(starWidth)
   const svgRef = useRef<SVGSVGElement>(null);
   const animationFrameRef = useRef<number | undefined>(undefined);
   const starsRef = useRef<Array<{
@@ -144,6 +145,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
             defs?.removeChild(star.gradient);
           } catch (e) {
             // Element already removed
+            console.log(e)
           }
           return false;
         }
@@ -174,6 +176,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
           svg.removeChild(star.element);
           defs?.removeChild(star.gradient);
         } catch (e) {
+          console.log(e)
           // Element already removed
         }
       });

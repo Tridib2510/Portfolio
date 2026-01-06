@@ -262,7 +262,7 @@ export const PixelatedCanvas: React.FC<PixelatedCanvasProps> = ({
             b = Math.round(b * (1 - k) + tintRGB[2] * k);
           }
 
-          const Lc = luminance(cx, cy);
+          
           const grad =
             Math.abs(luminance(cx + 1, cy) - luminance(cx - 1, cy)) +
             Math.abs(luminance(cx, cy + 1) - luminance(cx, cy - 1));

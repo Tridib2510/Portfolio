@@ -8,6 +8,7 @@ import React, {
   useContext,
   useRef,
   useEffect,
+  useCallback,
   MouseEvent,
   ReactNode,
   Dispatch,
@@ -19,6 +20,8 @@ import React, {
 const MouseEnterContext = createContext<
   [boolean, Dispatch<SetStateAction<boolean>>] | undefined
 >(undefined);
+
+/* ---------------- Card Container ---------------- */
 
 export const CardContainer = ({
   children,
@@ -34,23 +37,24 @@ export const CardContainer = ({
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
+
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
+
     const x = (e.clientX - left - width / 2) / 25;
     const y = (e.clientY - top - height / 2) / 25;
+
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
-  const handleMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
-    console.log(e);
+  const handleMouseEnter = () => {
     setIsMouseEntered(true);
   };
 
-  const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
-    console.log(e);
+  const handleMouseLeave = () => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
-    containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
   };
 
   return (
@@ -80,6 +84,8 @@ export const CardContainer = ({
   );
 };
 
+/* ---------------- Card Body ---------------- */
+
 export const CardBody = ({
   children,
   className,
@@ -98,6 +104,8 @@ export const CardBody = ({
     </div>
   );
 };
+
+/* ---------------- Card Item ---------------- */
 
 interface CardItemProps extends HTMLAttributes<HTMLElement> {
   as?: ElementType;
@@ -126,18 +134,41 @@ export const CardItem = ({
   const ref = useRef<HTMLElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
+  const handleAnimations = useCallback(() => {
+    if (!ref.current) return;
+
+    if (isMouseEntered) {
+      ref.current.style.transform = `
+        translateX(${translateX}px)
+        translateY(${translateY}px)
+        translateZ(${translateZ}px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        rotateZ(${rotateZ}deg)
+      `;
+    } else {
+      ref.current.style.transform = `
+        translateX(0px)
+        translateY(0px)
+        translateZ(0px)
+        rotateX(0deg)
+        rotateY(0deg)
+        rotateZ(0deg)
+      `;
+    }
+  }, [
+    isMouseEntered,
+    translateX,
+    translateY,
+    translateZ,
+    rotateX,
+    rotateY,
+    rotateZ,
+  ]);
+
   useEffect(() => {
     handleAnimations();
-  }, [isMouseEntered]);
-
-  const handleAnimations = () => {
-    if (!ref.current) return;
-    if (isMouseEntered) {
-      ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
-    } else {
-      ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
-    }
-  };
+  }, [handleAnimations]);
 
   return (
     <Tag
@@ -150,10 +181,12 @@ export const CardItem = ({
   );
 };
 
+/* ---------------- Hook ---------------- */
+
 export const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
-  if (context === undefined) {
-    throw new Error("useMouseEnter must be used within a MouseEnterProvider");
+  if (!context) {
+    throw new Error("useMouseEnter must be used within CardContainer");
   }
   return context;
 };

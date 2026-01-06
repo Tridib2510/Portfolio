@@ -14,6 +14,21 @@ interface ContributionDay {
   level: number;
 }
 
+/* ---------- API response typing ---------- */
+
+interface RawContribution {
+  date?: string;
+  dateString?: string;
+  count?: number;
+  contributionCount?: number;
+}
+
+interface GithubContributionsResponse {
+  contributions:
+    | RawContribution[]
+    | Record<string, number>;
+}
+
 export const GithubContributions: React.FC<GithubContributionsProps> = ({
   isDarkMode,
   username = "Tridib2510",
@@ -27,24 +42,32 @@ export const GithubContributions: React.FC<GithubContributionsProps> = ({
     const fetchContributions = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/github-contributions?username=${username}`);
-        if (!res.ok) throw new Error("Failed to fetch");
 
-        const data = await res.json();
-        const raw = Array.isArray(data.contributions)
+        const res = await fetch(
+          `/api/github-contributions?username=${username}`
+        );
+        if (!res.ok) throw new Error("Failed to fetch contributions");
+
+        const data: GithubContributionsResponse = await res.json();
+
+        const raw: RawContribution[] = Array.isArray(data.contributions)
           ? data.contributions
-          : Object.keys(data.contributions).map((date) => ({
+          : Object.entries(data.contributions).map(([date, count]) => ({
               date,
-              count: data.contributions[date],
+              count,
             }));
 
         let total = 0;
 
-        const parsed = raw
-          .map((d: any) => {
-            const count = Number(d.count ?? d.contributionCount ?? 0);
-            const date = String(d.date ?? "");
+        const parsed: ContributionDay[] = raw
+          .map((item) => {
+            const count = Number(
+              item.count ?? item.contributionCount ?? 0
+            );
+            const date = String(item.date ?? item.dateString ?? "");
+
             if (!date) return null;
+
             total += count;
 
             let level = 0;
@@ -55,7 +78,7 @@ export const GithubContributions: React.FC<GithubContributionsProps> = ({
 
             return { date, count, level };
           })
-          .filter(Boolean) as ContributionDay[];
+          .filter((d): d is ContributionDay => d !== null);
 
         const today = new Date();
         today.setHours(0, 0, 0, 0);
@@ -67,14 +90,19 @@ export const GithubContributions: React.FC<GithubContributionsProps> = ({
           const d = new Date(today);
           d.setDate(d.getDate() - i);
           const ds = d.toISOString().split("T")[0];
-          days.push(map.get(ds) ?? { date: ds, count: 0, level: 0 });
+
+          days.push(
+            map.get(ds) ?? { date: ds, count: 0, level: 0 }
+          );
         }
 
         setContributions(days);
         setTotalContributions(total);
         setLoading(false);
-      } catch (e: any) {
-        setError(e.message);
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Unknown error"
+        );
         setLoading(false);
       }
     };
@@ -93,16 +121,26 @@ export const GithubContributions: React.FC<GithubContributionsProps> = ({
   }
 
   const months = () => {
-    const seen = new Set();
+    const seen = new Set<string>();
     return weeks
-      .map((w, i) => {
-        const d = new Date(w[0].date);
-        const key = `${d.getFullYear()}-${d.getMonth()}`;
+      .map((week, i) => {
+        const first = week[0];
+        if (!first) return null;
+
+        const date = new Date(first.date);
+        const key = `${date.getFullYear()}-${date.getMonth()}`;
+
         if (seen.has(key)) return null;
         seen.add(key);
-        return { label: d.toLocaleString("en-US", { month: "short" }), i };
+
+        return {
+          label: date.toLocaleString("en-US", { month: "short" }),
+          i,
+        };
       })
-      .filter(Boolean) as { label: string; i: number }[];
+      .filter(
+        (m): m is { label: string; i: number } => m !== null
+      );
   };
 
   return (
@@ -119,7 +157,8 @@ export const GithubContributions: React.FC<GithubContributionsProps> = ({
       {!loading && !error && (
         <div className="max-w-5xl mx-auto">
           <p className="text-center text-xl font-bold mb-4">
-            {totalContributions.toLocaleString()} contributions in the last year
+            {totalContributions.toLocaleString()} contributions in the
+            last year
           </p>
 
           <div
@@ -129,9 +168,8 @@ export const GithubContributions: React.FC<GithubContributionsProps> = ({
                 : "border-gray-300 bg-white"
             }`}
           >
-            {/* HORIZONTAL ONLY */}
             <div className="overflow-x-auto overflow-y-hidden">
-              {/* MONTH LABELS */}
+              {/* Month labels */}
               <div
                 className="relative mb-2 min-w-max"
                 style={{ paddingLeft: 28, height: 16 }}
@@ -147,27 +185,26 @@ export const GithubContributions: React.FC<GithubContributionsProps> = ({
                 ))}
               </div>
 
-              <div className="flex gap-1 min-w-max relative">
-                {/* GRID */}
-                <div className="flex gap-1">
-                  {weeks.map((week, wi) => (
-                    <div key={wi} className="flex flex-col gap-1">
-                      {week.map((day) => (
-                        <motion.div
-                          key={day.date}
-                          whileHover={{ scale: 1.25 }}
-                          whileTap={{ scale: 1.25 }}
-                          className="relative"
-                        >
-                          <div
-                            className="w-3 h-3 rounded-sm"
-                            style={{ backgroundColor: getColor(day.level) }}
-                          />
-                        </motion.div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
+              {/* Grid */}
+              <div className="flex gap-1 min-w-max">
+                {weeks.map((week, wi) => (
+                  <div key={wi} className="flex flex-col gap-1">
+                    {week.map((day) => (
+                      <motion.div
+                        key={day.date}
+                        whileHover={{ scale: 1.25 }}
+                        whileTap={{ scale: 1.25 }}
+                      >
+                        <div
+                          className="w-3 h-3 rounded-sm"
+                          style={{
+                            backgroundColor: getColor(day.level),
+                          }}
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
