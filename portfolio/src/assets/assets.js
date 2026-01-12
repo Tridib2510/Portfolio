@@ -133,6 +133,13 @@ export const workData = [
         github:'https://github.com/Tridib2510/SummaryIO',
         link:'https://summaryio.streamlit.app/'
     },
+     {
+    title:'Full-stack sports event platform',
+    description:'React.js  Node.js  express   MongoDB  Socket.IO  JWT  OAuth 2.0',
+    bgImage:'/work-15.png',
+    link:'https://kick-it-version3-0.vercel.app/',
+    github:'https://github.com/Tridib2510/KickItVersion3.0'
+   },
     {
         title:'IMDB Movie Review Sentiment Analysis',
         description:'Python  TensorFlow  Keras  Streamlit  NumPy  Pandas  Matplotlib  Seaborn',
@@ -180,13 +187,7 @@ export const workData = [
         
     },
 
-    {
-    title:'Full-stack sports event platform',
-    description:'React.js  Node.js  express   MongoDB  Socket.IO  JWT  OAuth 2.0',
-    bgImage:'/work-15.png',
-    link:'https://kick-it-version3-0.vercel.app/',
-    github:'https://github.com/Tridib2510/KickItVersion3.0'
-   },
+   
  
    {
     title:'Portfolio',
