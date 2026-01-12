@@ -112,13 +112,7 @@ export const workData = [
     //     bgImage: '/work-4.png',
     // },
       
-    {
-        title:'Network Security Project',
-        description:'MLOPS    Python    FastAPI    Uvicorn    Scikit-learn    Pandas   Numpy   MLflow   Docker',
-        bgImage:'/work-11.png',
-        link:'https://github.com/Tridib2510/networksecurity',
-        github:'https://github.com/Tridib2510/networksecurity'
-    },
+   
     {
         title:'GenAI Search Engine with Langchain',
         description:'Python    Langchain   Streamlit    LLM',
@@ -126,20 +120,28 @@ export const workData = [
         github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
         link:'https://search-engine-genai-app.onrender.com/'
     },
+    
      {
         title:'LangChain based YouTube and Website Summarizer',
         description:'Python    Langchain   Streamlit    LLM',
         bgImage:'/work-25.png',
         github:'https://github.com/Tridib2510/SummaryIO',
         link:'https://summaryio.streamlit.app/'
-    },
-     {
+       },
+    {
     title:'Full-stack sports event platform',
     description:'React.js  Node.js  express   MongoDB  Socket.IO  JWT  OAuth 2.0',
     bgImage:'/work-15.png',
     link:'https://kick-it-version3-0.vercel.app/',
     github:'https://github.com/Tridib2510/KickItVersion3.0'
    },
+    {
+        title:'Network Security Project',
+        description:'MLOPS    Python    FastAPI    Uvicorn    Scikit-learn    Pandas   Numpy   MLflow   Docker',
+        bgImage:'/work-11.png',
+        link:'https://github.com/Tridib2510/networksecurity',
+        github:'https://github.com/Tridib2510/networksecurity'
+    },
     {
         title:'IMDB Movie Review Sentiment Analysis',
         description:'Python  TensorFlow  Keras  Streamlit  NumPy  Pandas  Matplotlib  Seaborn',
