@@ -122,7 +122,7 @@ export const workData = [
     },
     
      {
-        title:'LangChain based YouTube and Website Summarizer',
+        title:'LangChain YouTube & Website Summarizer',
         description:'Python    Langchain   Streamlit    LLM',
         bgImage:'/work-25.png',
         github:'https://github.com/Tridib2510/SummaryIO',
