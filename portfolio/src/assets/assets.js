@@ -126,6 +126,13 @@ export const workData = [
         github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
         link:'https://search-engine-genai-app.onrender.com/'
     },
+     {
+        title:'LangChain based YouTube and Website Summarizer',
+        description:'Python    Langchain   Streamlit    LLM',
+        bgImage:'/work-25.png',
+        github:'https://github.com/Tridib2510/SummaryIO',
+        link:'https://summaryio.streamlit.app/'
+    },
     {
         title:'IMDB Movie Review Sentiment Analysis',
         description:'Python  TensorFlow  Keras  Streamlit  NumPy  Pandas  Matplotlib  Seaborn',
