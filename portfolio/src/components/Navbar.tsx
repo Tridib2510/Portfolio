@@ -58,6 +58,7 @@ const sideMenuRef = useRef<HTMLUListElement>(null);//We use HTMLUListElement
             <li><a href="#about"className='font-Ovo' >About me</a></li>
             <li><a href="#services" className='font-Ovo'>Services</a></li>
             <li><a href="#work" className='font-Ovo'>My Work</a></li>
+            <li><a href="#contributions" className='font-Ovo'>My Contributions</a></li>
             <li><a href="#contact" className='font-Ovo'>Contact me</a></li>
         </ul>
         <div className='flex items-center gap-4'>
