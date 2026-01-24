@@ -131,7 +131,7 @@ export const workData = [
     {
         title:'NeuroMail(Gmail Assistant)',
         description:'Python  Langchain  Streamlit LLM  Gmail API  Google OAuth 2.0',
-        bgImage:'/work-26.png',
+        bgImage:'/work-27.png',
         github:'https://github.com/Tridib2510/NeuroMail',
         link:'https://github.com/Tridib2510/NeuroMail'
        },
