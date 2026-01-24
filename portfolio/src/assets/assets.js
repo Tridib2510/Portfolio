@@ -118,7 +118,7 @@ export const workData = [
         description:'Python    Langchain   Streamlit    LLM',
         bgImage:'/work-20.png',
         github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
-        link:'https://search-engine-genai-app.onrender.com/'
+        link:'https://huggingface.co/spaces/Tridib2510/Search_Engine_LLM'
     },
     
      {
@@ -127,6 +127,13 @@ export const workData = [
         bgImage:'/work-25.png',
         github:'https://github.com/Tridib2510/SummaryIO',
         link:'https://summaryio.streamlit.app/'
+       },
+    {
+        title:'NeuroMail(Gmail Assistant)',
+        description:'Python  Langchain  Streamlit LLM  Gmail API  Google OAuth 2.0',
+        bgImage:'/work-26.png',
+        github:'https://github.com/Tridib2510/NeuroMail',
+        link:'https://github.com/Tridib2510/NeuroMail'
        },
     {
     title:'Full-stack sports event platform',
