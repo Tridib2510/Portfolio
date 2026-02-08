@@ -60,6 +60,7 @@ const sideMenuRef = useRef<HTMLUListElement>(null);//We use HTMLUListElement
             <li><a href="#experience" className='font-Ovo'>Experience</a></li>
             <li><a href="#patents" className='font-Ovo'>Patents</a></li>
             <li><a href="#work" className='font-Ovo'>My Work</a></li>
+            <li><a href="#github" className='font-Ovo'>My Contributions</a></li>
             <li><a href="#contact" className='font-Ovo'>Contact me</a></li>
         </ul>
         <div className='flex items-center gap-4'>
@@ -83,12 +84,11 @@ const sideMenuRef = useRef<HTMLUListElement>(null);//We use HTMLUListElement
             <Image src={assets.close_black} alt='' className='w-5 cursor pointer'  />
         </div>
            <li><a href="#top" className='font-Ovo' onClick={closeMenu}>Home</a></li>
-             <li><a href="#about"className='font-Ovo' onClick={closeMenu} >About me</a></li>
-             <li><a href="#services" className='font-Ovo' onClick={closeMenu}>Services</a></li>
-             <li><a href="#experience" className='font-Ovo' onClick={closeMenu}>Experience</a></li>
-             <li><a href="#patents" className='font-Ovo' onClick={closeMenu}>Patents</a></li>
-             <li><a href="#work" className='font-Ovo' onClick={closeMenu}>My Work</a></li>
-             <li><a href="#contact" className='font-Ovo' onClick={closeMenu}>Contact me</a></li>
+            <li><a href="#about"className='font-Ovo' onClick={closeMenu} >About me</a></li>
+            <li><a href="#services" className='font-Ovo' onClick={closeMenu}>Services</a></li>
+            <li><a href="#work" className='font-Ovo' onClick={closeMenu}>My Work</a></li>
+            <li><a href="#github" className='font-Ovo' onClick={closeMenu}>My Contributions</a></li>
+            <li><a href="#contact" className='font-Ovo' onClick={closeMenu}>Contact me</a></li>
           </ul>
         </div>
     </nav>

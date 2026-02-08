@@ -112,19 +112,42 @@ export const workData = [
     //     bgImage: '/work-4.png',
     // },
       
+   
+    {
+        title:'GenAI Search Engine with Langchain',
+        description:'Python    Langchain   Streamlit    LLM',
+        bgImage:'/work-20.png',
+        github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
+        link:'https://huggingface.co/spaces/Tridib2510/Search_Engine_LLM'
+    },
+    
+     {
+        title:'LangChain YouTube & Website Summarizer',
+        description:'Python    Langchain   Streamlit    LLM',
+        bgImage:'/work-25.png',
+        github:'https://github.com/Tridib2510/SummaryIO',
+        link:'https://summaryio.streamlit.app/'
+       },
+    {
+        title:'NeuroMail(Gmail Assistant)',
+        description:'Python  Langchain  Streamlit LLM  Gmail API  Google OAuth 2.0',
+        bgImage:'/work-27.png',
+        github:'https://github.com/Tridib2510/NeuroMail',
+        link:'https://github.com/Tridib2510/NeuroMail'
+       },
+    {
+    title:'Full-stack sports event platform',
+    description:'React.js  Node.js  express   MongoDB  Socket.IO  JWT  OAuth 2.0',
+    bgImage:'/work-15.png',
+    link:'https://kick-it-version3-0.vercel.app/',
+    github:'https://github.com/Tridib2510/KickItVersion3.0'
+   },
     {
         title:'Network Security Project',
         description:'MLOPS    Python    FastAPI    Uvicorn    Scikit-learn    Pandas   Numpy   MLflow   Docker',
         bgImage:'/work-11.png',
         link:'https://github.com/Tridib2510/networksecurity',
         github:'https://github.com/Tridib2510/networksecurity'
-    },
-    {
-        title:'GenAI Search Engine with Langchain',
-        description:'Python    Langchain   Streamlit    LLM',
-        bgImage:'/work-20.png',
-        github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
-        link:'https://search-engine-genai-app.onrender.com/'
     },
     {
         title:'IMDB Movie Review Sentiment Analysis',
@@ -173,13 +196,7 @@ export const workData = [
         
     },
 
-    {
-    title:'Full-stack sports event platform',
-    description:'React.js  Node.js  express   MongoDB  Socket.IO  JWT  OAuth 2.0',
-    bgImage:'/work-15.png',
-    link:'https://kick-it-version3-0.vercel.app/',
-    github:'https://github.com/Tridib2510/KickItVersion3.0'
-   },
+   
  
    {
     title:'Portfolio',
