@@ -57,6 +57,8 @@ const sideMenuRef = useRef<HTMLUListElement>(null);//We use HTMLUListElement
             <li><a href="#top" className='font-Ovo'>Home</a></li>
             <li><a href="#about"className='font-Ovo' >About me</a></li>
             <li><a href="#services" className='font-Ovo'>Services</a></li>
+            <li><a href="#experience" className='font-Ovo'>Experience</a></li>
+            <li><a href="#patents" className='font-Ovo'>Patents</a></li>
             <li><a href="#work" className='font-Ovo'>My Work</a></li>
             <li><a href="#contact" className='font-Ovo'>Contact me</a></li>
         </ul>
@@ -80,15 +82,13 @@ const sideMenuRef = useRef<HTMLUListElement>(null);//We use HTMLUListElement
         <div className='absolute right-6 top-6' onClick={closeMenu}>
             <Image src={assets.close_black} alt='' className='w-5 cursor pointer'  />
         </div>
-           {/* We also used onClick for everyElement on the menu since when we
-           click on them then the menu should close and our page should
-           be directed to it's appropriate postion
-           */}
            <li><a href="#top" className='font-Ovo' onClick={closeMenu}>Home</a></li>
-            <li><a href="#about"className='font-Ovo' onClick={closeMenu} >About me</a></li>
-            <li><a href="#services" className='font-Ovo' onClick={closeMenu}>Services</a></li>
-            <li><a href="#work" className='font-Ovo' onClick={closeMenu}>My Work</a></li>
-            <li><a href="#contact" className='font-Ovo' onClick={closeMenu}>Contact me</a></li>
+             <li><a href="#about"className='font-Ovo' onClick={closeMenu} >About me</a></li>
+             <li><a href="#services" className='font-Ovo' onClick={closeMenu}>Services</a></li>
+             <li><a href="#experience" className='font-Ovo' onClick={closeMenu}>Experience</a></li>
+             <li><a href="#patents" className='font-Ovo' onClick={closeMenu}>Patents</a></li>
+             <li><a href="#work" className='font-Ovo' onClick={closeMenu}>My Work</a></li>
+             <li><a href="#contact" className='font-Ovo' onClick={closeMenu}>Contact me</a></li>
           </ul>
         </div>
     </nav>

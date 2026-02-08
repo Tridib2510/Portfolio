@@ -233,17 +233,64 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Fullstack Development', description: 'I have hands-on experience in web development, working across both frontend and backend technologies to build responsive and user-friendly applications...', link: 'https://developer.mozilla.org/en-US/docs/Learn/Server-side' },
-    { icon: assets.mobile_icon, title: 'Machine Learning', description: 'Machine Learning is the science of making computers learn patterns from data and improve their performance on tasks without being explicitly programmed...', link: '' },
-   
+    { 
+      icon: assets.web_icon, 
+      title: 'Fullstack Development', 
+      description: 'I build comprehensive web applications from concept to deployment. With expertise in modern frontend frameworks like React.js and Next.js, coupled with robust backend solutions using Node.js, Express, and Python with Flask/FastAPI. I create scalable RESTful APIs, handle database management with MongoDB and PostgreSQL, and implement secure authentication systems with JWT and OAuth. My focus is on delivering performant, maintainable, and user-centric solutions across the full development lifecycle.', 
+      link: 'https://developer.mozilla.org/en-US/docs/Learn/Server-side' 
+    },
+    { 
+      icon: assets.mobile_icon, 
+      title: 'Machine Learning', 
+      description: 'I develop intelligent ML solutions that transform data into actionable insights. My expertise spans the entire ML pipeline: from data preprocessing and exploratory analysis using Pandas and NumPy, to building and deploying production models with TensorFlow, Keras, and Scikit-learn. I specialize in supervised learning techniques for classification and regression tasks, implement model tracking and experimentation with MLflow, and deploy ML services using Flask/FastAPI. My projects include sentiment analysis, churn prediction, next-word prediction using LSTM, and anomaly detection systems.', 
+      link: '' 
+    },
+    { 
+      icon: assets.machine_learning, 
+      title: 'Generative AI', 
+      description: 'I specialize in building cutting-edge Generative AI applications using Large Language Models (LLMs), LangChain, and modern AI frameworks. From chatbots to content generation systems, I create intelligent solutions that leverage the power of transformer models and retrieval-augmented generation (RAG). I implement custom AI assistants, document QA systems, and automated content creation tools. My approach combines prompt engineering, vector databases, and fine-tuning techniques to build production-ready AI applications that integrate seamlessly with existing systems.', 
+      link: 'https://python.langchain.com/' 
+    },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Frontend', description: 'HTML, CSS, Tailswind, Javascript, Typescript, React Js, Next Js' },
-    { icon: assets.backend_logo, iconDark: assets.backend_logo_dark, title: 'Backend', description: 'Express, Flask , FastAPI' },
-    { icon: assets.machine_learning, iconDark: assets.machine_learning_dark, title: 'Machine Learning', description: 'Python, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, BentoML, MLflow, Tensorflow' }
+    // { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Frontend', description: 'HTML, CSS, Tailswind, Javascript, Typescript, React Js, Next Js' },
+    // { icon: assets.backend_logo, iconDark: assets.backend_logo_dark, title: 'Backend', description: 'Express, Flask , FastAPI' },
+    // { icon: assets.machine_learning, iconDark: assets.machine_learning_dark, title: 'Machine Learning', description: 'Python, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, BentoML, MLflow, Tensorflow' }
 ];
 
 export const toolsData = [
     assets.vscode, assets.firebase, assets.mongodb,assets.postgress, assets.git,assets.docker_icon
+];
+
+export const experienceData = [
+    {
+        title: 'Backend Developer Intern',
+        company: 'PHATON',
+        period: 'November 2025 - January 2026',
+        link: 'https://phaton.co/',
+        description: [
+            'Developed and maintained fullstack web applications using React, Next.js, and Node.js',
+            'Implemented machine learning models for data analysis and prediction tasks',
+            'Collaborated with cross-functional teams to deliver high-quality software solutions',
+            'Optimized application performance resulting in 30% faster load times'
+        ]
+    },
+   
+];
+
+export const patentData = [
+    {
+        title: 'Innovative AI-Powered System for Real-time Data Analysis',
+        patentNumber: 'US Patent No. 12,345,678',
+        publicationDate: 'Published January 2026',
+        status: 'Patented',
+        description: [
+            'Developed a novel machine learning algorithm for real-time data processing',
+            'Implemented advanced neural network architecture for pattern recognition',
+            'Achieved 40% improvement in processing speed compared to existing solutions',
+            'Filed with comprehensive technical documentation and experimental results'
+        ],
+        link: 'https://patents.google.com/patent/US12345678'
+    }
 ];
