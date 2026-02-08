@@ -287,27 +287,10 @@ export const experienceData = [
         period: 'November 2025 - January 2026',
         link: 'https://phaton.co/',
         description: [
-            'Developed and maintained fullstack web applications using React, Next.js, and Node.js',
-            'Implemented machine learning models for data analysis and prediction tasks',
+            'Developed and maintained backend of full web applications using express, Typescript , Node.js and PostgreSQL',
             'Collaborated with cross-functional teams to deliver high-quality software solutions',
             'Optimized application performance resulting in 30% faster load times'
         ]
     },
    
-];
-
-export const patentData = [
-    {
-        title: 'Innovative AI-Powered System for Real-time Data Analysis',
-        patentNumber: 'US Patent No. 12,345,678',
-        publicationDate: 'Published January 2026',
-        status: 'Patented',
-        description: [
-            'Developed a novel machine learning algorithm for real-time data processing',
-            'Implemented advanced neural network architecture for pattern recognition',
-            'Achieved 40% improvement in processing speed compared to existing solutions',
-            'Filed with comprehensive technical documentation and experimental results'
-        ],
-        link: 'https://patents.google.com/patent/US12345678'
-    }
 ];
