@@ -34,31 +34,31 @@ const About = ({isDarkMode}:{isDarkMode:boolean}) => {
      initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{duration:1}}
-    id="about" className='w-full px-[12%] py-10 scroll-mt-20'>
+     id="about" className='w-full px-[6%] sm:px-[10%] lg:px-[12%] py-10 scroll-mt-20'>
         <motion.h4 
         initial={{opacity:0,y:-20}}
         whileInView={{opacity:1,y:0}}
         transition={{duration:0.5,delay:0.5}}
         className='text-center mb-2 text-lg font-ovo'>Introduction</motion.h4>
-        <motion.h2 className='text-center text-5xl font-ovo'>About me</motion.h2>
+        <motion.h2 className='text-center text-3xl sm:text-4xl md:text-5xl font-ovo'>About me</motion.h2>
         
         <motion.div 
         initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{duration:0.8}}
-        className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
-            <motion.div
+        className='flex w-full flex-col lg:flex-row items-center gap-10 sm:gap-15 lg:gap-20 my-10 sm:my-15 lg:my-20'>
+             <motion.div
             initial={{opacity:0,scale:0.9}}
                 whileInView={{opacity:1,scale:1}}
                 transition={{duration:0.6}}
-            className='w-80 sm:w-96 lg:w-[28rem] rounded-3xl max-w-none'>
+            className='w-64 sm:w-80 md:w-96 lg:w-[28rem] rounded-3xl max-w-none -ml-4 sm:-ml-6 md:-ml-8 lg:ml-0'>
       <div className="w-full">
-  <div className="aspect-square w-full">
+  <div className="aspect-square w-full flex items-center justify-center">
     <PixelatedCanvas
       src={assets.user_image}
-      width={350}
-      height={350}
-      className="w-full h-full rounded-2xl shadow-2xl"
+      width={450}
+      height={450}
+      className="w-full h-full rounded-2xl shadow-2xl block"
       cellSize={5}
       dotScale={0.85}
       shape="square"
@@ -81,14 +81,14 @@ const About = ({isDarkMode}:{isDarkMode:boolean}) => {
         whileInView={{opacity:1}}
         transition={{duration:0.6,delay:1}}
     className='flex-1'>
-      <p className='mb-10 max-w-2xl font-ovo text-lg leading-relaxed'>
+      <p className='mb-6 sm:mb-10 max-w-2xl font-ovo text-base sm:text-lg leading-relaxed'>
         I am a passionate <span className={`font-bold ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>Software Developer</span> with deep expertise in <span className={`font-bold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>Fullstack Development</span>, <span className={`font-bold ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>Machine Learning</span>, <span className={`font-bold ${isDarkMode ? 'text-yellow-400' : 'text-yellow-600'}`}>Generative AI</span>, and <span className={`font-bold ${isDarkMode ? 'text-pink-400' : 'text-pink-600'}`}>Large Language Models (LLMs)</span>. I build scalable web applications and intelligent AI systems that solve real-world problems.
       </p>
       <motion.ul
       initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{duration:1}}
-      className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
+      className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-2xl'>
         {infoList.map(({icon,iconDark,title,description},index)=>(
            <motion.li key={index}            
         whileHover={{scale:1.05}}
@@ -99,47 +99,36 @@ const About = ({isDarkMode}:{isDarkMode:boolean}) => {
            </motion.li>
         ))}
       </motion.ul>
-      <motion.h4 
+      <motion.h4
       initial={{y:20,opacity:0}}
         whileInView={{y:0,opacity:1}}
         transition={{delay:1.3,duration:0.5}}
-      className={`my-8 text-xl font-semibold text-gray-700 ${isDarkMode?'text-white':''}`}>Tech Stack</motion.h4>
+      className={`my-6 sm:my-8 text-lg sm:text-xl font-semibold text-gray-700 ${isDarkMode?'text-white':''}`}>Tech Stack</motion.h4>
       <motion.div
      initial={{y:20,opacity:0}}
         whileInView={{opacity:1}}
         transition={{delay:1.5,duration:0.6}}
-      className={`flex flex-wrap gap-4 max-w-4xl`}>
-        {techStack.map((tech,index)=>(
-          <motion.a 
-          key={index}
-          href={tech.link}
-          target='_blank'
-          rel='noreferrer'
-           whileHover={{scale:1.15, y: -5}}
-          className={`flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 border border-gray-400 rounded-xl cursor-pointer hover:-translate-y-1 duration-500 transition-all ${isDarkMode?'border-white/30 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)]':'hover:border-purple-500 hover:shadow-lg'}`}>
-          <Image src={tech.icon} alt={tech.name} width={32} height={32} className='w-7 h-7 sm:w-8 sm:h-8' />
-          </motion.a>
-        ))}
-      </motion.div>
-      <motion.h4 
-      initial={{y:20,opacity:0}}
-        whileInView={{y:0,opacity:1}}
-        transition={{delay:1.7,duration:0.5}}
-      className={`mt-10 mb-6 text-gray-700 ${isDarkMode?'text-white/80':''}`}>Other Tools</motion.h4>
-      <motion.ul
-     initial={{y:20,opacity:0}}
-        whileInView={{opacity:1}}
-        transition={{delay:1.9,duration:0.6}}
-      className='flex items-center gap-3 sm:gap-5'>
-        {toolsData.map((tool,index)=>(
-          <motion.li 
-          key={index}
-           whileHover={{scale:1.1}}
-          className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>
-          <Image src={tool} alt='Tool' className='w-5 sm:w-7'/>
-          </motion.li>
-        ))}
-      </motion.ul>
+      className={`flex flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl`}>
+         {techStack.map((tech,index)=>(
+           <motion.a
+           key={index}
+           href={tech.link}
+           target='_blank'
+           rel='noreferrer'
+            whileHover={{scale:1.15, y: -5}}
+           className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 border border-gray-400 rounded-xl cursor-pointer hover:-translate-y-1 duration-500 transition-all ${isDarkMode?'border-white/30 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)]':'hover:border-purple-500 hover:shadow-lg'}`}>
+           <Image src={tech.icon} alt={tech.name} width={32} height={32} className='w-6 h-6 sm:w-7 sm:h-7' />
+           </motion.a>
+         ))}
+         {toolsData.map((tool,index)=>(
+           <motion.li
+           key={`tool-${index}`}
+            whileHover={{scale:1.1}}
+           className='flex items-center justify-center w-10 sm:w-12 md:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>
+           <Image src={tool} alt='Tool' className='w-4 sm:w-5 md:w-7'/>
+           </motion.li>
+         ))}
+       </motion.div>
     </motion.div>
         </motion.div>
     </motion.div>
