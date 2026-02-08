@@ -80,7 +80,6 @@ const [isScroll,setIsScroll]=useState(false)
             <li><a href="#experience" className='font-Ovo'>Experience</a></li>
             <li><a href="#work" className='font-Ovo'>My Work</a></li>
             <li><a href="#github" className='font-Ovo'>My Contributions</a></li>
-            <li><a href="#contact" className='font-Ovo'>Contact me</a></li>
         </ul>
          <div className='flex items-center gap-3 sm:gap-4'>
 
@@ -108,7 +107,6 @@ const [isScroll,setIsScroll]=useState(false)
               <li><a href="#experience" className='font-Ovo text-lg sm:text-base py-2 hover:text-purple-600 dark:hover:text-purple-400 transition-colors' onClick={closeMenu}>Experience</a></li>
               <li><a href="#work" className='font-Ovo text-lg sm:text-base py-2 hover:text-purple-600 dark:hover:text-purple-400 transition-colors' onClick={closeMenu}>My Work</a></li>
               <li><a href="#github" className='font-Ovo text-lg sm:text-base py-2 hover:text-purple-600 dark:hover:text-purple-400 transition-colors' onClick={closeMenu}>My Contributions</a></li>
-              <li><a href="#contact" className='font-Ovo text-lg sm:text-base py-2 hover:text-purple-600 dark:hover:text-purple-400 transition-colors' onClick={closeMenu}>Contact me</a></li>
               <li className="pt-4 border-t border-gray-300 dark:border-gray-700 mt-2">
                   <a href="#contact" className={`flex items-center justify-center gap-2 px-6 py-2.5 border border-gray-500 rounded-full font-Ovo transition-all hover:border-purple-500 ${isDarkMode?`dark:border-white/50`:''}`} onClick={closeMenu}>Contact <Image alt="" src={isDarkMode?assets.arrow_icon_dark:assets.arrow_icon} className='w-3'/></a>
               </li>
