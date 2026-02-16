@@ -277,7 +277,7 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb,assets.postgress, assets.git,assets.docker_icon
+    assets.vscode, assets.firebase, assets.git
 ];
 
 export const experienceData = [
