@@ -121,13 +121,6 @@ export const workData = [
         link:'https://huggingface.co/spaces/Tridib2510/Search_Engine_LLM'
     },
     
-     {
-        title:'LangChain YouTube & Website Summarizer',
-        description:'Python    Langchain   Streamlit    LLM',
-        bgImage:'/work-25.png',
-        github:'https://github.com/Tridib2510/SummaryIO',
-        link:'https://summaryio.streamlit.app/'
-       },
     {
         title:'NeuroMail(Gmail Assistant)',
         description:'Python  Langchain  Streamlit LLM  Gmail API  Google OAuth 2.0',
@@ -138,9 +131,16 @@ export const workData = [
       {
         title:'MOJITO COCKTAIL Home Page',
         description:'React  GSAP  Tailwind CSS',
-        bgImage:'/work-27.png',
+        bgImage:'/work-30.png',
         github:'https://github.com/Tridib2510/MOJITO-COCKTAIL',
         link:'https://mojito-cocktail-lemon.vercel.app/'
+       },
+      {
+        title:'LangChain YouTube & Website Summarizer',
+        description:'Python    Langchain   Streamlit    LLM',
+        bgImage:'/work-25.png',
+        github:'https://github.com/Tridib2510/SummaryIO',
+        link:'https://summaryio.streamlit.app/'
        },
     {
     title:'Full-stack sports event platform',
