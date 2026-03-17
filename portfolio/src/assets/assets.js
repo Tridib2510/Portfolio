@@ -135,6 +135,13 @@ export const workData = [
         github:'https://github.com/Tridib2510/NeuroMail',
         link:'https://github.com/Tridib2510/NeuroMail'
        },
+      {
+        title:'MOJITO COCKTAIL Home Page',
+        description:'React  GSAP  Tailwind CSS',
+        bgImage:'/work-27.png',
+        github:'https://github.com/Tridib2510/MOJITO-COCKTAIL',
+        link:'https://mojito-cocktail-lemon.vercel.app/'
+       },
     {
     title:'Full-stack sports event platform',
     description:'React.js  Node.js  express   MongoDB  Socket.IO  JWT  OAuth 2.0',
@@ -205,46 +212,7 @@ export const workData = [
     link:'https://portfolio-livid-pi-12wuho7vgj.vercel.app/',
     github:'https://github.com/Tridib2510/Portfolio'
    },
-    {
-        title: 'Todo list',
-        description: 'React+Vite',
-        bgImage: '/work-5.png',
-        link:'https://todolist-indol-mu.vercel.app/',
-        github:'https://github.com/Tridib2510/Todolist'
-    },
-    {
-        title:'Quiz app',
-        description:'Javascript',
-        bgImage:'/work-6.png',
-        link:'https://quiz-7a6hkautd-tridib2510s-projects.vercel.app/',
-        github:'https://github.com/Tridib2510/quiz-app'
 
-    },
-    
-    {
-        title:'weather app',
-        description:'Javascript',
-        bgImage:'/work-8.png',
-        link:'https://weather-app-iota-five-27.vercel.app/',
-        github:'https://github.com/Tridib2510/Weather-app'
-
-    },
-    {
-        title:'Authentication System',
-        description:'Next.js',
-        bgImage:'/work-9.png',
-        link:'https://authentication-system-zeta-lilac.vercel.app/login',
-        github:'https://github.com/Tridib2510/authentication-system'
-
-    },
-     {
-        title:'Password Generator',
-        description:'Javascript',
-        bgImage:'/work-12.png',
-        link:'https://passwordgenerator-two-orcin.vercel.app/',
-        github:'https://github.com/Tridib2510/passwordGenerator'
-
-    }
     
 
 ]
