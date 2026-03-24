@@ -158,69 +158,69 @@ export const workData = [
         link:'https://github.com/Tridib2510/networksecurity',
         github:'https://github.com/Tridib2510/networksecurity'
     },
-    {
-        title:'LangChain YouTube & Website Summarizer',
-        description:'Python    Langchain   Streamlit    LLM',
-        bgImage:'/work-25.png',
-        github:'https://github.com/Tridib2510/SummaryIO',
-        link:'https://summaryio.streamlit.app/'
-       },
-    {
-        title:'IMDB Movie Review Sentiment Analysis',
-        description:'Python  TensorFlow  Keras  Streamlit  NumPy  Pandas  Matplotlib  Seaborn',
-        bgImage:'/work-16.png',
-        link:'https://imdb-movie-review-kuomjwgzhkhrjjxzxfee9r.streamlit.app/',
-        github:'https://github.com/Tridib2510/IMDB-Movie-Review'
-    },
-    {
-        title:'Customer Churn Prediction',
-        description:'Tensorflow  Python  Pandas NumPy  Matplotlib  Seaborn ',
-        bgImage:'/work-17.png',
-        link:'https://annclassificationchurn-np76sc3a9jcisjytle8saa.streamlit.app/',
-        github:'https://github.com/Tridib2510/ANN_Classification_Churn'
-    },
-     {
-        title:'Next Word Prediction',
-        description:'Tensorflow  keras  LSTM  nltk  Flask  pickle',
-        bgImage:'/work-18.png',
-        link:'https://next-word-prediction-gaexovrqd3mrqzqv2uhgpa.streamlit.app/',
-        github:'https://github.com/Tridib2510/Next-Word-Prediction'
-    },
-    {
-       title:'Anime Notify Chrome Extension',
-       description:'Typescript  HTML  CSS  Chrome Extensions API  Python Flask BeautifulSoup',
-        bgImage:'/work-19.png',
-        link:'https://github.com/Tridib2510/Anime-notifier',
-        github:'https://github.com/Tridib2510/Anime-notifier'
-    },
+    // {
+    //     title:'LangChain YouTube & Website Summarizer',
+    //     description:'Python    Langchain   Streamlit    LLM',
+    //     bgImage:'/work-25.png',
+    //     github:'https://github.com/Tridib2510/SummaryIO',
+    //     link:'https://summaryio.streamlit.app/'
+    //    },
+   //  {
+   //      title:'IMDB Movie Review Sentiment Analysis',
+   //      description:'Python  TensorFlow  Keras  Streamlit  NumPy  Pandas  Matplotlib  Seaborn',
+   //      bgImage:'/work-16.png',
+   //      link:'https://imdb-movie-review-kuomjwgzhkhrjjxzxfee9r.streamlit.app/',
+   //      github:'https://github.com/Tridib2510/IMDB-Movie-Review'
+   //  },
+   //  {
+   //      title:'Customer Churn Prediction',
+   //      description:'Tensorflow  Python  Pandas NumPy  Matplotlib  Seaborn ',
+   //      bgImage:'/work-17.png',
+   //      link:'https://annclassificationchurn-np76sc3a9jcisjytle8saa.streamlit.app/',
+   //      github:'https://github.com/Tridib2510/ANN_Classification_Churn'
+   //  },
+   //   {
+   //      title:'Next Word Prediction',
+   //      description:'Tensorflow  keras  LSTM  nltk  Flask  pickle',
+   //      bgImage:'/work-18.png',
+   //      link:'https://next-word-prediction-gaexovrqd3mrqzqv2uhgpa.streamlit.app/',
+   //      github:'https://github.com/Tridib2510/Next-Word-Prediction'
+   //  },
+   //  {
+   //     title:'Anime Notify Chrome Extension',
+   //     description:'Typescript  HTML  CSS  Chrome Extensions API  Python Flask BeautifulSoup',
+   //      bgImage:'/work-19.png',
+   //      link:'https://github.com/Tridib2510/Anime-notifier',
+   //      github:'https://github.com/Tridib2510/Anime-notifier'
+   //  },
 
-    {
-        title:'AI Therapist',
-        description:'Python  Pandas  Numpy  Flask  Scikit-learn',
-        bgImage:'/work-7.png',
-        link:'https://sih-prototype-mental-health-1.onrender.com/',
-        github:'https://github.com/Tridib2510/AI-based-Therapist'
+   //  {
+   //      title:'AI Therapist',
+   //      description:'Python  Pandas  Numpy  Flask  Scikit-learn',
+   //      bgImage:'/work-7.png',
+   //      link:'https://sih-prototype-mental-health-1.onrender.com/',
+   //      github:'https://github.com/Tridib2510/AI-based-Therapist'
 
 
-    },
-     {
-        title:'Forest fire prediction',
-        description:'Python  Scikit-learn  Pandas  NumPy  Flask',
-        bgImage:'/work-10.png',
-        link:'https://forest-fires-1.onrender.com/predictdata',
-        github:'https://github.com/Tridib2510/forest-fires'
+   //  },
+   //   {
+   //      title:'Forest fire prediction',
+   //      description:'Python  Scikit-learn  Pandas  NumPy  Flask',
+   //      bgImage:'/work-10.png',
+   //      link:'https://forest-fires-1.onrender.com/predictdata',
+   //      github:'https://github.com/Tridib2510/forest-fires'
         
-    },
+   //  },
 
    
  
-   {
-    title:'Portfolio',
-    description:'Next js, Typescript',
-    bgImage:'/work-14.png',
-    link:'https://portfolio-livid-pi-12wuho7vgj.vercel.app/',
-    github:'https://github.com/Tridib2510/Portfolio'
-   },
+   // {
+   //  title:'Portfolio',
+   //  description:'Next js, Typescript',
+   //  bgImage:'/work-14.png',
+   //  link:'https://portfolio-livid-pi-12wuho7vgj.vercel.app/',
+   //  github:'https://github.com/Tridib2510/Portfolio'
+   // },
 
     
 
