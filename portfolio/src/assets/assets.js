@@ -123,7 +123,7 @@ export const workData = [
    
     {
         title:'LangSeek',
-        description:'A Generative AI–powered Search Engine built with Langchain',
+        description:'A Generative AI powered Search Engine built with Langchain leveraging modern LLM capabilities through LangChain',
         bgImage:'/work-20.png',
         github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
         link:'https://huggingface.co/spaces/Tridib2510/Search_Engine_LLM'
@@ -131,14 +131,14 @@ export const workData = [
     
     {
         title:'NeuroMail',
-        description:'NeuroMail is an AI-powered Gmail Assistant built using LangChain',
+        description:'NeuroMail is an AI-powered Gmail Assistant built using Langchain allowing us to control and manage your Gmail using natural language',
         bgImage:'/work-27.png',
         github:'https://github.com/Tridib2510/NeuroMail',
         link:'https://github.com/Tridib2510/NeuroMail'
        },
       {
         title:'MOJITO COCKTAIL Home Page',
-        description:'Home page for MOJITO COCKTAIL with gsap',
+        description:'A modern Mojito cocktail themed website built with smooth animations and interactive UI using React and GSAP',
         bgImage:'/work-30.png',
         github:'https://github.com/Tridib2510/MOJITO-COCKTAIL',
         link:'https://mojito-cocktail-lemon.vercel.app/'
