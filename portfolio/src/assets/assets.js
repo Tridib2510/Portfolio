@@ -131,7 +131,7 @@ export const workData = [
     
     {
         title:'NeuroMail',
-        description:'NeuroMail is an AI-powered Gmail Assistant built using Langchain allowing us to control and manage your Gmail using natural language',
+        description:'NeuroMail is an AI-powered Gmail Assistant built using Langchain allowing us to control and manage our Gmail',
         bgImage:'/work-27.png',
         github:'https://github.com/Tridib2510/NeuroMail',
         link:'https://github.com/Tridib2510/NeuroMail'
@@ -143,27 +143,28 @@ export const workData = [
         github:'https://github.com/Tridib2510/MOJITO-COCKTAIL',
         link:'https://mojito-cocktail-lemon.vercel.app/'
        },
-      {
-        title:'LangChain YouTube & Website Summarizer',
-        description:'Python    Langchain   Streamlit    LLM',
-        bgImage:'/work-25.png',
-        github:'https://github.com/Tridib2510/SummaryIO',
-        link:'https://summaryio.streamlit.app/'
-       },
+      
     {
     title:'Full-stack sports event platform',
-    description:'React.js  Node.js  express   MongoDB  Socket.IO  JWT  OAuth 2.0',
+    description:'A full-stack web app for sports enthusiasts to create, discover, and join local games bringing players and organizers together',
     bgImage:'/work-15.png',
     link:'https://kick-it-version3-0.vercel.app/',
     github:'https://github.com/Tridib2510/KickItVersion3.0'
    },
     {
         title:'Network Security Project',
-        description:'MLOPS    Python    FastAPI    Uvicorn    Scikit-learn    Pandas   Numpy   MLflow   Docker',
+        description:'An end-to-end Machine Learning project for detecting malicious / phishing URLs and strengthening network security.',
         bgImage:'/work-11.png',
         link:'https://github.com/Tridib2510/networksecurity',
         github:'https://github.com/Tridib2510/networksecurity'
     },
+    {
+        title:'LangChain YouTube & Website Summarizer',
+        description:'Python    Langchain   Streamlit    LLM',
+        bgImage:'/work-25.png',
+        github:'https://github.com/Tridib2510/SummaryIO',
+        link:'https://summaryio.streamlit.app/'
+       },
     {
         title:'IMDB Movie Review Sentiment Analysis',
         description:'Python  TensorFlow  Keras  Streamlit  NumPy  Pandas  Matplotlib  Seaborn',
