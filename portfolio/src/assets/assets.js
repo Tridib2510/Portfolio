@@ -112,8 +112,8 @@ export const workData = [
     //     bgImage: '/work-4.png',
     // },
         {
-        title:'NeuroCode (My own Claude Code)',
-        description:'Agentic AI  Gemini SDK',
+        title:'NeuroCode',
+        description:'NeuroCode is an AI‑powered coding assistant and terminal code editor inspired by tools like Claude Code.',
         bgImage:'/work-29.png',
         github:'https://github.com/Tridib2510/NeuroCode',
         link:'https://github.com/Tridib2510/NeuroCode'
@@ -122,23 +122,23 @@ export const workData = [
       
    
     {
-        title:'GenAI Search Engine with Langchain',
-        description:'Python    Langchain   Streamlit    LLM',
+        title:'LangSeek',
+        description:'A Generative AI–powered Search Engine built with Langchain',
         bgImage:'/work-20.png',
         github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
         link:'https://huggingface.co/spaces/Tridib2510/Search_Engine_LLM'
     },
     
     {
-        title:'NeuroMail(Gmail Assistant)',
-        description:'Python  Langchain  Streamlit LLM  Gmail API  Google OAuth 2.0',
+        title:'NeuroMail',
+        description:'NeuroMail is an AI-powered Gmail Assistant built using LangChain',
         bgImage:'/work-27.png',
         github:'https://github.com/Tridib2510/NeuroMail',
         link:'https://github.com/Tridib2510/NeuroMail'
        },
       {
         title:'MOJITO COCKTAIL Home Page',
-        description:'React  GSAP  Tailwind CSS',
+        description:'Home page for MOJITO COCKTAIL with gsap',
         bgImage:'/work-30.png',
         github:'https://github.com/Tridib2510/MOJITO-COCKTAIL',
         link:'https://mojito-cocktail-lemon.vercel.app/'
