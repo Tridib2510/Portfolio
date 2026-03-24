@@ -111,6 +111,14 @@ export const workData = [
     //     description: 'UI/UX Design',
     //     bgImage: '/work-4.png',
     // },
+        {
+        title:'NeuroCode (My own Claude Code)',
+        description:'Agentic AI  Gemini SDK',
+        bgImage:'/work-29.png',
+        github:'https://github.com/Tridib2510/NeuroCode',
+        link:'https://github.com/Tridib2510/NeuroCode'
+    },
+
       
    
     {
