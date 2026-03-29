@@ -124,7 +124,7 @@ export const workData = [
     {
         title:'LangSeek',
         description:'A Generative AI powered Search Engine built with Langchain leveraging modern LLM capabilities through LangChain',
-        bgImage:'/work-100.jpeg',
+        bgImage:'/work-20.png',
         github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
         link:'https://huggingface.co/spaces/Tridib2510/Search_Engine_LLM'
     },
