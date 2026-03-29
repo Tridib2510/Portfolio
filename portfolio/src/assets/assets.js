@@ -114,7 +114,7 @@ export const workData = [
         {
         title:'NeuroCode',
         description:'NeuroCode is an AI‑powered coding assistant and terminal code editor inspired by tools like Claude Code.',
-        bgImage:'/work-',
+        bgImage:'/work-100.jpg',
         github:'https://github.com/Tridib2510/NeuroCode',
         link:'https://github.com/Tridib2510/NeuroCode'
     },
