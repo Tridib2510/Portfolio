@@ -114,7 +114,7 @@ export const workData = [
         {
         title:'NeuroCode',
         description:'NeuroCode is an AI‑powered coding assistant and terminal code editor inspired by tools like Claude Code.',
-        bgImage:'/work-100.jpg',
+        bgImage:'/work-',
         github:'https://github.com/Tridib2510/NeuroCode',
         link:'https://github.com/Tridib2510/NeuroCode'
     },
@@ -124,7 +124,7 @@ export const workData = [
     {
         title:'LangSeek',
         description:'A Generative AI powered Search Engine built with Langchain leveraging modern LLM capabilities through LangChain',
-        bgImage:'/work-20.png',
+        bgImage:'/work-100.jpeg',
         github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
         link:'https://huggingface.co/spaces/Tridib2510/Search_Engine_LLM'
     },
