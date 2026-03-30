@@ -118,18 +118,18 @@ export const workData = [
         description:'NeuroCode is an AI‑powered coding assistant and terminal code editor inspired by tools like Claude Code.',
         bgImage:'/work-100.jpg',
         dates:'February 2026',
-        technologies:["python","Gemini SDK","BeautifulSoup","Reqests","tkinter"],
+        technologies:["Python", "Gemini SDK", "BeautifulSoup","tkinter","Agentic AI architecture"],
         github:'https://github.com/Tridib2510/NeuroCode',
         link:'https://github.com/Tridib2510/NeuroCode',
         links: [
-      {
-        type: "Website",
-        href: "https://github.com/Tridib2510/NeuroCode",
-        icon: <Icons.globe className="size-3" />,
-      },
+    //   {
+    //     type: "Website",
+    //     href: "https://github.com/Tridib2510/NeuroCode",
+    //     icon: <Icons.globe className="size-3" />,
+    //   },
       {
         type: "Source",
-        href: "https://github.com/creation22/stickx",
+        href: "https://github.com/Tridib2510/NeuroCode",
         icon: <Icons.github className="size-3" />,
       }
     ]
@@ -139,20 +139,20 @@ export const workData = [
    
     {
         title:'LangSeek',
-        description:'A Generative AI powered Search Engine built with Langchain leveraging modern LLM capabilities through LangChain',
+        description:'A Generative AI powered Search Engine built with Langchain leveraging modern LLM capabilities through LangChain.',
         bgImage:'/work-20.png',
-        dates:'',
-        technologies:[""],
+        dates:'January 2026',
+        technologies:["Python","LangChain","Streamlit"],
         github:'https://github.com/Tridib2510/Search-Engine-GenAI-app',
         links: [
       {
         type: "Website",
-        href: "https://stickx.vercel.app",
+        href: "https://huggingface.co/spaces/Tridib2510/Search_Engine_LLM",
         icon: <Icons.globe className="size-3" />,
       },
       {
         type: "Source",
-        href: "https://github.com/creation22/stickx",
+        href: "https://github.com/Tridib2510/Search-Engine-GenAI-app",
         icon: <Icons.github className="size-3" />,
       }
     ],
@@ -163,38 +163,59 @@ export const workData = [
         title:'NeuroMail',
         description:'NeuroMail is an AI-powered Gmail Assistant built using Langchain allowing us to control and manage our Gmail',
         bgImage:'/work-27.png',
-        dates:'',
-        technologies:[""],
+        dates:'January 2026',
+        technologies:["Python","LangChain","Gmail API","Google OAuth 2.0","Streamlit"],
         github:'https://github.com/Tridib2510/NeuroMail',
          links: [
       {
         type: "Website",
-        href: "https://stickx.vercel.app",
+        href: "https://github.com/Tridib2510/NeuroMail",
         icon: <Icons.globe className="size-3" />,
       },
       {
         type: "Source",
-        href: "https://github.com/creation22/stickx",
+        href: "https://github.com/Tridib2510/NeuroMail",
         icon: <Icons.github className="size-3" />,
       }
     ],
         link:'https://github.com/Tridib2510/NeuroMail'
        },
-      {
-        title:'MOJITO COCKTAIL Home Page',
-        description:'A modern Mojito cocktail themed website built with smooth animations and interactive UI using React and GSAP',
-        bgImage:'/work-30.png',
-        dates:'',
-        technologies:[""],
-         links: [
+       {
+    title:'KickIt',
+    description:'A Full-stack web app for sports enthusiasts to create, discover, and join local games bringing players and organizers together',
+    bgImage:'/work-15.png',
+    dates:'October 2025',
+    technologies:["React","Tailswind CSS","Node js","express","MongoDB","Socket.IO","JWT"],
+     links: [
       {
         type: "Website",
-        href: "https://stickx.vercel.app",
+        href: "https://kick-it-version3-0.vercel.app/",
         icon: <Icons.globe className="size-3" />,
       },
       {
         type: "Source",
-        href: "https://github.com/creation22/stickx",
+        href: "https://github.com/Tridib2510/KickItVersion3.0",
+        icon: <Icons.github className="size-3" />,
+      }
+    ],
+    link:'https://kick-it-version3-0.vercel.app/',
+    github:'https://github.com/Tridib2510/KickItVersion3.0'
+   },
+      {
+        title:'MOJITO COCKTAIL Home Page',
+        description:'A modern Mojito cocktail themed website built with smooth animations and interactive UI using React and GSAP',
+        bgImage:'/work-30.png',
+        dates:'February 2026',
+        technologies:["React","Typescript","GSAP","Tailswind CSS"],
+         links: [
+      {
+        type: "Website",
+        href: "https://mojito-cocktail-lemon.vercel.app",
+        icon: <Icons.globe className="size-3" />,
+      },
+      {
+        type: "Source",
+        href: "https://github.com/Tridib2510/MOJITO-COCKTAIL",
         icon: <Icons.github className="size-3" />,
       }
     ],
@@ -202,42 +223,22 @@ export const workData = [
         link:'https://mojito-cocktail-lemon.vercel.app/'
        },
       
-    {
-    title:'Full-stack sports event platform',
-    description:'A full-stack web app for sports enthusiasts to create, discover, and join local games bringing players and organizers together',
-    bgImage:'/work-15.png',
-    dates:'',
-    technologies:[""],
-     links: [
-      {
-        type: "Website",
-        href: "https://stickx.vercel.app",
-        icon: <Icons.globe className="size-3" />,
-      },
-      {
-        type: "Source",
-        href: "https://github.com/creation22/stickx",
-        icon: <Icons.github className="size-3" />,
-      }
-    ],
-    link:'https://kick-it-version3-0.vercel.app/',
-    github:'https://github.com/Tridib2510/KickItVersion3.0'
-   },
+    
     {
         title:'Network Security Project',
         description:'An end-to-end Machine Learning project for detecting malicious / phishing URLs and strengthening network security.',
         bgImage:'/work-11.png',
-        dates:'',
-        technologies:[""],
+        dates:'June 2025',
+        technologies:["FastAPI","Scikit-learn","MLflow","Docker"],
          links: [
-      {
-        type: "Website",
-        href: "https://stickx.vercel.app",
-        icon: <Icons.globe className="size-3" />,
-      },
+    //   {
+    //     type: "Website",
+    //     href: "https://stickx.vercel.app",
+    //     icon: <Icons.globe className="size-3" />,
+    //   },
       {
         type: "Source",
-        href: "https://github.com/creation22/stickx",
+        href: "ttps://github.com/Tridib2510/networksecurity",
         icon: <Icons.github className="size-3" />,
       }
     ],
