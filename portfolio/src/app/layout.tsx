@@ -16,6 +16,15 @@ const ovo = Ovo({
 export const metadata: Metadata = {
   title: "Portfolio",//changes the title at the top
   description: "",
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32" },
+      { url: "/favicon.png", sizes: "192x192" },
+    ],
+    apple: [
+      { url: "/favicon.png", sizes: "180x180" },
+    ],
+  },
 };
 
 export default function RootLayout({
