@@ -14,7 +14,7 @@ const ovo = Ovo({
 });
 
 export const metadata: Metadata = {
-  title: "Tridib",//changes the title at the top
+  title: "Tridib2510",//changes the title at the top
   description: "",
   icons: {
     icon: [
