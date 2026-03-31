@@ -167,11 +167,11 @@ export const workData = [
         technologies:["Python","LangChain","Gmail API","Google OAuth 2.0","Streamlit"],
         github:'https://github.com/Tridib2510/NeuroMail',
          links: [
-      {
-        type: "Website",
-        href: "https://github.com/Tridib2510/NeuroMail",
-        icon: <Icons.globe className="size-3" />,
-      },
+      // {
+      //   type: "Website",
+      //   href: "https://github.com/Tridib2510/NeuroMail",
+      //   icon: <Icons.globe className="size-3" />,
+      // },
       {
         type: "Source",
         href: "https://github.com/Tridib2510/NeuroMail",
