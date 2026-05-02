@@ -116,7 +116,7 @@ export const workData = [
         {
         title:'NeuroCode',
         description:'NeuroCode is an AI‑powered coding assistant and terminal code editor inspired by tools like Claude Code.',
-        bgImage:'/work-98.jpg',
+        bgImage:'/work-98.png',
         dates:'February 2026',
         technologies:["Python", "Gemini SDK", "BeautifulSoup","tkinter","Agentic AI architecture"],
         github:'https://github.com/Tridib2510/NeuroCode',
