@@ -134,6 +134,28 @@ export const workData = [
       }
     ]
     },
+    {
+        title:'Intellex',
+        description:'Built a Perplexity-style AI search engine using Tavily and Supabase that retrieves real-time web results and generates concise, context-aware answers using an LLM.',
+        bgImage:'/work-55.png',
+        dates:'February 2026',
+        technologies:["Bun", "Typescript", "React","Langchain","Tavily","Supabase"],
+        github:'https://github.com/Tridib2510/Perplexity-Clone',
+        link:'https://perplexity-clone-nu-two.vercel.app/',
+        links: [
+      {
+        type: "Website",
+        href: "https://perplexity-clone-nu-two.vercel.app/",
+        icon: <Icons.globe className="size-3" />,
+      },
+      {
+        type: "Source",
+        href: "https://github.com/Tridib2510/Perplexity-Clone",
+        icon: <Icons.github className="size-3" />,
+      }
+    ]
+    },
+    
 
       
    
