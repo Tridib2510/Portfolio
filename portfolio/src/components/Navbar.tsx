@@ -75,8 +75,9 @@ const [isScroll,setIsScroll]=useState(false)
             <li><a href="#about"className='font-Ovo' >About me</a></li>
             <li><a href="#services" className='font-Ovo'>Services</a></li>
             <li><a href="#experience" className='font-Ovo'>Experience</a></li>
+            <li><a href="#github" className='font-Ovo'>Contributions</a></li>
             <li><a href="#work" className='font-Ovo'>My Work</a></li>
-            <li><a href="#github" className='font-Ovo'>My Contributions</a></li>
+            
         </ul>
          <div className='flex items-center gap-2'>
 
@@ -102,8 +103,9 @@ const [isScroll,setIsScroll]=useState(false)
               <li><a href="#about" className={`font-Ovo text-base py-2 border-b transition-colors ${isDarkMode?'border-gray-700 hover:text-purple-400':'border-gray-200 hover:text-purple-600'}`} onClick={closeMenu}>About me</a></li>
               <li><a href="#services" className={`font-Ovo text-base py-2 border-b transition-colors ${isDarkMode?'border-gray-700 hover:text-purple-400':'border-gray-200 hover:text-purple-600'}`} onClick={closeMenu}>Services</a></li>
               <li><a href="#experience" className={`font-Ovo text-base py-2 border-b transition-colors ${isDarkMode?'border-gray-700 hover:text-purple-400':'border-gray-200 hover:text-purple-600'}`} onClick={closeMenu}>Experience</a></li>
-              <li><a href="#work" className={`font-Ovo text-base py-2 border-b transition-colors ${isDarkMode?'border-gray-700 hover:text-purple-400':'border-gray-200 hover:text-purple-600'}`} onClick={closeMenu}>My Work</a></li>
-              <li><a href="#github" className={`font-Ovo text-base py-2 border-b transition-colors ${isDarkMode?'border-gray-700 hover:text-purple-400':'border-gray-200 hover:text-purple-600'}`} onClick={closeMenu}>My Contributions</a></li>
+            <li><a href="#github" className={`font-Ovo text-base py-2 border-b transition-colors ${isDarkMode?'border-gray-700 hover:text-purple-400':'border-gray-200 hover:text-purple-600'}`} onClick={closeMenu}>Contributions</a></li>  
+            <li><a href="#work" className={`font-Ovo text-base py-2 border-b transition-colors ${isDarkMode?'border-gray-700 hover:text-purple-400':'border-gray-200 hover:text-purple-600'}`} onClick={closeMenu}>My Work</a></li>
+              
               <li className="pt-4 mt-2">
                   <a href="#contact" className={`flex items-center justify-center gap-2 px-6 py-2.5 rounded-full font-Ovo transition-all ${isDarkMode?'border border-gray-600 hover:border-purple-400 hover:text-purple-400':'border border-gray-400 hover:border-purple-600 hover:text-purple-600'}`} onClick={closeMenu}>Contact <Image alt="" src={isDarkMode?assets.arrow_icon_dark:assets.arrow_icon} className='w-3'/></a>
               </li>
