@@ -115,7 +115,7 @@ export const workData = [
     // },
         {
         title:'NeuroCode',
-        description:'NeuroCode is an AI‑powered coding assistant and terminal code editor inspired by tools like Claude Code.',
+        description:'NeuroCode is an AI‑powered coding assistant and terminal code editor inspired by tools like Claude Code. It uses Agentic AI with the Gemini SDK to analyze code, modify files, execute scripts, and assist with development workflows directly from the terminal',
         bgImage:'/work-98.png',
         dates:'February 2026',
         technologies:["Python", "Gemini SDK", "BeautifulSoup","tkinter","Agentic AI architecture"],
@@ -134,6 +134,27 @@ export const workData = [
       }
     ]
     },
+     {
+    title:'KickIt',
+    description:'Kick It is a dynamic sports event platform where players and organizers meet. A full-stack web app for sports enthusiasts to create, discover, and join local games — whether you’re looking for a casual pickup match or a competitive tournament, Kick It brings athletes together seamlessly.',
+    bgImage:'/work-129.png',
+    dates:'October 2025',
+    technologies:["React","Tailswind CSS","Node js","express","MongoDB","Socket.IO","JWT"],
+     links: [
+      {
+        type: "Website",
+        href: "https://kick-it-version3-0.vercel.app/",
+        icon: <Icons.globe className="size-3" />,
+      },
+      {
+        type: "Source",
+        href: "https://github.com/Tridib2510/KickItVersion3.0",
+        icon: <Icons.github className="size-3" />,
+      }
+    ],
+    link:'https://kick-it-version3-0.vercel.app/',
+    github:'https://github.com/Tridib2510/KickItVersion3.0'
+   },
     {
         title:'Intellex',
         description:'Built a Perplexity-style AI search engine using Tavily and Supabase that retrieves real-time web results and generates concise, context-aware answers using an LLM.',
@@ -183,7 +204,7 @@ export const workData = [
     
     {
         title:'NeuroMail',
-        description:'NeuroMail is an AI-powered Gmail Assistant built using Langchain allowing us to control and manage our Gmail',
+        description:'NeuroMail is your 1 way ticket to maintain and organize your mail. Build with Langchain . Designed to make navigating your mail easy and stress free.',
         bgImage:'/work-27.png',
         dates:'January 2026',
         technologies:["Python","LangChain","Gmail API","Google OAuth 2.0","Streamlit"],
@@ -202,27 +223,7 @@ export const workData = [
     ],
         link:'https://github.com/Tridib2510/NeuroMail'
        },
-       {
-    title:'KickIt',
-    description:'A Full-stack web app for sports enthusiasts to create, discover, and join local games bringing players and organizers together',
-    bgImage:'/work-15.png',
-    dates:'October 2025',
-    technologies:["React","Tailswind CSS","Node js","express","MongoDB","Socket.IO","JWT"],
-     links: [
-      {
-        type: "Website",
-        href: "https://kick-it-version3-0.vercel.app/",
-        icon: <Icons.globe className="size-3" />,
-      },
-      {
-        type: "Source",
-        href: "https://github.com/Tridib2510/KickItVersion3.0",
-        icon: <Icons.github className="size-3" />,
-      }
-    ],
-    link:'https://kick-it-version3-0.vercel.app/',
-    github:'https://github.com/Tridib2510/KickItVersion3.0'
-   },
+      
       {
         title:'MOJITO COCKTAIL Home Page',
         description:'A modern Mojito cocktail themed website built with smooth animations and interactive UI using React and GSAP',
@@ -248,7 +249,7 @@ export const workData = [
     
     {
         title:'Network Security Project',
-        description:'An end-to-end Machine Learning project for detecting malicious / phishing URLs and strengthening network security.',
+        description:'An end-to-end Machine Learning project for detecting malicious / phishing URLs and strengthening network security. This project covers the full ML lifecycle — data ingestion, preprocessing, model training, experiment tracking with MLflow, deployment using FastAPI + Uvicorn, and containerization with Docker.',
         bgImage:'/work-11.png',
         dates:'June 2025',
         technologies:["FastAPI","Scikit-learn","MLflow","Docker"],
